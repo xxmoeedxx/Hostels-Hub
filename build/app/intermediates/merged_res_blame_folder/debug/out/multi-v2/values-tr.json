@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/moeed/Documents/GitHub/dribbble_ui_design_auth/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml",
+            "outputFile": "/home/moeed/Documents/GitHub/dribbble_ui_design_auth/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml",
             "map": [
                 {
                     "source": "/home/moeed/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/values-tr/values-tr.xml",
