@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -96,7 +95,8 @@ class WelcomePage extends StatelessWidget {
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => Signup()),
+                                            builder: (context) => Signup(),
+                                          ),
                                         );
                                       } else {
                                         print('not valid');

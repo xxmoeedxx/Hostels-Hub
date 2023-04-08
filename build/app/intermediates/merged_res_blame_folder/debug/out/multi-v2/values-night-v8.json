@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/moeed/Documents/GitHub/dribbble_ui_design_auth/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/moeed/Flutter Projects/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/moeed/Documents/GitHub/dribbble_ui_design_auth/Hostels-Hub/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/moeed/Flutter Projects/Hostels-Hub/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

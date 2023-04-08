@@ -62,10 +62,40 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///home/moeed/snap/flutter/common/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/google_maps_flutter-2.2.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "google_maps_flutter_android",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.4.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "google_maps_flutter_ios",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/google_maps_flutter_ios-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.2.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "js",
@@ -110,6 +140,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///home/moeed/snap/flutter/common/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -130,6 +166,12 @@
     {
       "name": "stream_channel",
       "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/stream_channel-2.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "stream_transform",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -158,6 +200,30 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "webview_flutter",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/webview_flutter-2.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "webview_flutter_android",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/webview_flutter_android-2.10.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "webview_flutter_platform_interface",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-1.9.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "webview_flutter_wkwebview",
+      "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-2.9.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///home/moeed/.pub-cache/hosted/pub.dev/xml-5.4.1",
       "packageUri": "lib/",
@@ -176,7 +242,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-04-08T08:44:14.883237Z",
+  "generated": "2023-04-08T11:01:50.841922Z",
   "generator": "pub",
   "generatorVersion": "2.19.3"
 }

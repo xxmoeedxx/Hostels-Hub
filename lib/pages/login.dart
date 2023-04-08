@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
 import 'package:flutter/material.dart';
+import 'package:authui/pages/map.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -131,7 +132,7 @@ class LoginPage extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => LoginPage()));
+                                            builder: (context) => MapPage()));
                                   },
                                 ),
                                 const SizedBox(height: 30),
