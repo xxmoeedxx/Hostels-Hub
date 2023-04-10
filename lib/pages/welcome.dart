@@ -8,6 +8,7 @@ import 'package:authui/components/my_textfield.dart';
 import 'package:authui/components/square_tile.dart';
 import 'package:authui/pages/signup.dart';
 
+// ignore: must_be_immutable
 class WelcomePage extends StatelessWidget {
   WelcomePage({super.key});
 
@@ -15,11 +16,9 @@ class WelcomePage extends StatelessWidget {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  double _sigmaX = 5; // from 0-10
-  double _sigmaY = 5; // from 0-10
-  double _opacity = 0.2;
-  double _width = 350;
-  double _height = 300;
+  final double _sigmaX = 5; // from 0-10
+  final double _sigmaY = 5; // from 0-10
+  final double _opacity = 0.2;
   final _formKey = GlobalKey<FormState>();
 
   // sign user in method
@@ -32,7 +31,7 @@ class WelcomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: ConstrainedBox(
           constraints: BoxConstraints(),
-          child: Container(
+          child: SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Stack(
               alignment: Alignment.center,
@@ -99,7 +98,7 @@ class WelcomePage extends StatelessWidget {
                                           ),
                                         );
                                       } else {
-                                        print('not valid');
+                                        //print('not valid');
                                       }
                                     }),
                                   ),

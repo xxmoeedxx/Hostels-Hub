@@ -1,40 +1,29 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:io';
 import 'dart:ui';
 import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:authui/pages/map.dart';
 
+// ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
   // text editing controllers
   final passwordController = TextEditingController();
 
-  double _sigmaX = 5; // from 0-10
-  double _sigmaY = 5; // from 0-10
-  double _opacity = 0.2;
-  double _width = 350;
-  double _height = 300;
+  final double _sigmaX = 5; // from 0-10
+  final double _sigmaY = 5; // from 0-10
+  final double _opacity = 0.2;
   final _formKey = GlobalKey<FormState>();
-
-  // sign user in method
-  void signUserIn() {
-    if (_formKey.currentState!.validate()) {
-      print('valid');
-    } else {
-      print('not valid');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Stack(
             alignment: Alignment.center,
