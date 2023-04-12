@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/moeed/Flutter Projects/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/home/moeed/.gradle/caches/transforms-3/01c48c62c7e34628e780904563a3f9f5/transformed/appcompat-1.1.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

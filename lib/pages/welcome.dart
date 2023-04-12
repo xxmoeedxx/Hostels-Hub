@@ -2,11 +2,26 @@
 
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
 import 'package:authui/components/square_tile.dart';
 import 'package:authui/pages/signup.dart';
+
+// void signInWithEmail(String email, String password) async {
+//   try {
+//     UserCredential userCredential =
+//         await FirebaseAuth.instance.signInWithEmailAndPassword(
+//       email: email,
+//       password: password,
+//     );
+//     User user = userCredential.user;
+//     print('Signed in as ${user.email}');
+//   } catch (e) {
+//     print('Error: $e');
+//   }
+// }
 
 // ignore: must_be_immutable
 class WelcomePage extends StatelessWidget {
@@ -91,12 +106,22 @@ class WelcomePage extends StatelessWidget {
                                   MyButton(
                                     onTap: (() {
                                       if (_formKey.currentState!.validate()) {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) => Signup(),
-                                          ),
-                                        );
+                                        try {
+                                          FirebaseAuth.instance
+                                              .signInWithEmailAndPassword(
+                                                  email:
+                                                      usernameController.text,
+                                                  password:
+                                                      passwordController.text);
+                                        } catch (e) {
+                                          print('Error: $e');
+                                        }
+                                        // Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(
+                                        //     builder: (context) => Signup(),
+                                        //   ),
+                                        // );
                                       } else {
                                         //print('not valid');
                                       }
