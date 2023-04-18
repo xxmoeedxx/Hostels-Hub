@@ -3,6 +3,7 @@
 import 'dart:ui';
 import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
+import 'package:authui/pages/hostel_list.dart';
 import 'package:flutter/material.dart';
 import 'package:authui/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -140,10 +141,11 @@ class LoginPage extends StatelessWidget {
                                   onTap: () async {
                                     if (await signInWithEmailAndPassword(
                                         email, passwordController.text)) {
-                                      Navigator.push(
+                                      Navigator.pushReplacement(
                                           context,
                                           MaterialPageRoute(
-                                              builder: (context) => MapPage()));
+                                              builder: (context) =>
+                                                  HostelListPage()));
                                     }
                                   },
                                 ),

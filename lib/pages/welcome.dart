@@ -2,6 +2,7 @@
 
 import 'dart:ui';
 
+import 'package:authui/pages/hostel_list.dart';
 import 'package:authui/pages/login.dart';
 import 'package:authui/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -198,13 +199,13 @@ class WelcomePage extends StatelessWidget {
                                       children: [
                                         // google button
                                         SquareTile(
-                                          onTap: () {
+                                          onTap: () async {
                                             signInWithGoogle().whenComplete(
-                                                () => Navigator.push(
+                                                () => Navigator.pushReplacement(
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            MapPage())));
+                                                            HostelListPage())));
                                           },
                                           imagePath: 'assets/images/google.png',
                                           title: 'Continue with Google',

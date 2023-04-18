@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/moeed/Flutter Projects/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
+            "outputFile": "/media/moeed/66C870D9C870A8C7/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ca/values-ca.xml",
             "map": [
                 {
                     "source": "/home/moeed/.gradle/caches/transforms-3/60db7527524ae4ececbf6973c6df4f3a/transformed/core-1.9.0/res/values-ca/values-ca.xml",

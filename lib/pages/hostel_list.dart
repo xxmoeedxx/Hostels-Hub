@@ -36,69 +36,69 @@ class _HostelListPageState extends State<HostelListPage> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Address:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${hostel.address}, ${hostel.location}',
                 style: TextStyle(
                   color: Colors.grey[700],
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Room Rent:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 'Rs. ${hostel.roomRent}/month',
                 style: TextStyle(
                   color: Colors.grey[700],
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Available Rooms:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${hostel.availableRooms}',
                 style: TextStyle(
                   color: Colors.grey[700],
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Air Conditioned:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${hostel.isAirConditioned}',
                 style: TextStyle(
                   color: Colors.grey[700],
                 ),
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Food Mess Available:',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 '${hostel.isFoodMessAvailable}',
                 style: TextStyle(
@@ -116,7 +116,7 @@ class _HostelListPageState extends State<HostelListPage> {
                 });
                 Navigator.of(context).pop();
               },
-              child: Text('Close'),
+              child: const Text('Close'),
             ),
           ],
         );
@@ -172,7 +172,7 @@ class _HostelListPageState extends State<HostelListPage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        shape: ContinuousRectangleBorder(
+        shape: const ContinuousRectangleBorder(
             borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
           bottomRight: Radius.circular(40),
@@ -192,7 +192,7 @@ class _HostelListPageState extends State<HostelListPage> {
           Expanded(
               flex: -2,
               child: IconButton(
-                icon: Icon(Icons.add),
+                icon: const Icon(Icons.add),
                 onPressed: () {
                   Navigator.push(
                       context,
@@ -208,96 +208,106 @@ class _HostelListPageState extends State<HostelListPage> {
                 showDialog(
                     context: context,
                     builder: (BuildContext context) {
-                      return AlertDialog(
-                        title: Text('Filters'),
-                        content: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            DropdownButtonFormField<String>(
-                              // your city filter widget code here
-                              decoration: const InputDecoration(
-                                contentPadding:
-                                    EdgeInsets.fromLTRB(16, 8, 16, 8),
-                                labelText: 'City',
-                                border: OutlineInputBorder(),
-                              ),
-                              value: _selectedCity,
-                              onChanged: (value) {
-                                setState(() {
-                                  _selectedCity = value!;
-                                });
-                              },
-                              items: _cities
-                                  .map((e) => DropdownMenuItem<String>(
-                                        value: e,
-                                        child: Text(e),
-                                      ))
-                                  .toList(),
-                            ),
-                            CheckboxListTile(
-                              title: Text('Air conditioned'),
-                              value: _isAirConditionedFilterEnabled,
-                              onChanged: (value) {
-                                setState(() {
-                                  _isAirConditionedFilterEnabled =
-                                      value ?? false;
-                                });
-                              },
-                            ),
-                            CheckboxListTile(
-                              title: Text('Food mess available'),
-                              value: _isFoodMessAvailableFilterEnabled,
-                              onChanged: (value) {
-                                setState(() {
-                                  _isFoodMessAvailableFilterEnabled =
-                                      value ?? false;
-                                });
-                              },
-                            ),
-                            CheckboxListTile(
-                              title: Text('Show All'),
-                              value: _showAllEnabled,
-                              onChanged: (value) {
-                                setState(() {
-                                  _showAllEnabled = value ?? false;
-                                });
-                              },
-                            ),
-                            SliderTheme(
-                              data: SliderThemeData(
-                                trackHeight: 2.0,
-                                activeTrackColor: Color.fromARGB(255, 7, 6, 68),
-                                inactiveTrackColor: Colors.black,
-                                thumbColor: Color.fromARGB(255, 7, 6, 68),
-                                overlayColor: Color.fromARGB(255, 7, 6, 68)
-                                    .withOpacity(0.2),
-                                overlayShape: RoundSliderOverlayShape(
-                                    overlayRadius: 12.0),
-                                thumbShape: RoundSliderThumbShape(
-                                    enabledThumbRadius: 16.0),
-                              ),
-                              child: Slider(
-                                value: _roomRentFilter.toDouble(),
-                                min: 0,
-                                max: 50000,
-                                divisions: 100,
-                                label: 'Max room rent: $_roomRentFilter',
+                      return StatefulBuilder(builder:
+                          (BuildContext context, StateSetter setStateD) {
+                        return AlertDialog(
+                          title: const Text('Filters'),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              DropdownButtonFormField<String>(
+                                // your city filter widget code here
+                                decoration: const InputDecoration(
+                                  contentPadding:
+                                      EdgeInsets.fromLTRB(16, 8, 16, 8),
+                                  labelText: 'City',
+                                  border: OutlineInputBorder(),
+                                ),
+                                value: _selectedCity,
                                 onChanged: (value) {
                                   setState(() {
-                                    _roomRentFilter = value.toInt();
+                                    _selectedCity = value!;
+                                  });
+                                },
+                                items: _cities
+                                    .map((e) => DropdownMenuItem<String>(
+                                          value: e,
+                                          child: Text(e),
+                                        ))
+                                    .toList(),
+                              ),
+                              CheckboxListTile(
+                                title: const Text('Air conditioned'),
+                                value: _isAirConditionedFilterEnabled,
+                                onChanged: (value) {
+                                  setState(() {
+                                    setStateD(() {});
+                                    _isAirConditionedFilterEnabled =
+                                        value ?? false;
                                   });
                                 },
                               ),
+                              CheckboxListTile(
+                                title: const Text('Food mess available'),
+                                value: _isFoodMessAvailableFilterEnabled,
+                                onChanged: (value) {
+                                  setState(() {
+                                    setStateD(() {});
+                                    _isFoodMessAvailableFilterEnabled =
+                                        value ?? false;
+                                  });
+                                },
+                              ),
+                              CheckboxListTile(
+                                title: const Text('Show All'),
+                                value: _showAllEnabled,
+                                onChanged: (value) {
+                                  setState(() {
+                                    setStateD(() {});
+                                    _showAllEnabled = value ?? false;
+                                  });
+                                },
+                              ),
+                              SliderTheme(
+                                data: SliderThemeData(
+                                  trackHeight: 2.0,
+                                  activeTrackColor:
+                                      const Color.fromARGB(255, 7, 6, 68),
+                                  inactiveTrackColor: Colors.black,
+                                  thumbColor:
+                                      const Color.fromARGB(255, 7, 6, 68),
+                                  overlayColor:
+                                      const Color.fromARGB(255, 7, 6, 68)
+                                          .withOpacity(0.2),
+                                  overlayShape: const RoundSliderOverlayShape(
+                                      overlayRadius: 12.0),
+                                  thumbShape: const RoundSliderThumbShape(
+                                      enabledThumbRadius: 16.0),
+                                ),
+                                child: Slider(
+                                  value: _roomRentFilter.toDouble(),
+                                  min: 0,
+                                  max: 25,
+                                  divisions: 100,
+                                  label: 'Max room rent: $_roomRentFilter',
+                                  onChanged: (value) {
+                                    setState(() {
+                                      setStateD(() {});
+                                      _roomRentFilter = value.toInt();
+                                    });
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          actions: <Widget>[
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              child: const Text('Close'),
                             ),
                           ],
-                        ),
-                        actions: <Widget>[
-                          TextButton(
-                            onPressed: () => Navigator.of(context).pop(),
-                            child: Text('Close'),
-                          ),
-                        ],
-                      );
+                        );
+                      });
                     });
               },
               icon: const Icon(Icons.filter_list),
@@ -305,11 +315,11 @@ class _HostelListPageState extends State<HostelListPage> {
             ),
           ),
         ],
-        backgroundColor: Color.fromARGB(255, 7, 6, 68),
+        backgroundColor: const Color.fromARGB(255, 7, 6, 68),
       ),
       body: Stack(children: [
         _isLoading
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(),
               )
             : Container(
@@ -328,7 +338,7 @@ class _HostelListPageState extends State<HostelListPage> {
                           Hostel hostel = _getFilteredHostels()[index];
                           return ListTile(
                             title: Text(hostel.name,
-                                style: TextStyle(color: Colors.black)),
+                                style: const TextStyle(color: Colors.black)),
                             subtitle: Text(hostel.location),
                             trailing: Text('Rs. ${hostel.roomRent}/month'),
                             onTap: () => _showHostelDetails(hostel),

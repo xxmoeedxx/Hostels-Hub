@@ -1,3 +1,6 @@
+import 'package:authui/pages/hostel_list.dart';
+import 'package:authui/pages/map.dart';
+import 'package:authui/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedBottomBar extends StatefulWidget {
@@ -32,6 +35,25 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
           onTap: (index) {
             setState(() {
               _currentIndex = index;
+              if (index == 0) {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => HostelListPage()));
+              } else if (index == 1) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MapPage()));
+              } else
+              // if (index == 2) {
+              //   Navigator.push(
+              //       context,
+              //       MaterialPageRoute(
+              //           builder: (context) => const ProfilePage()));
+              // }
+              if (index == 3) {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()));
+              }
             });
           },
           items: List.generate(
