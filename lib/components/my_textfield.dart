@@ -1,21 +1,32 @@
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
-  // ignore: prefer_typing_uninitialized_variables
-  final controller;
+  final TextEditingController controller;
   final String hintText;
   final bool obscureText;
+
   const MyTextField({
-    super.key,
+    Key? key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
-  });
+  }) : super(key: key);
+
+  String? _validateEmail(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Email address is required';
+    }
+    final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+    if (!emailRegex.hasMatch(value)) {
+      return 'Invalid email address';
+    }
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (val) => val!.isEmpty ? 'Veuillez remplir ce champ svp' : null,
+      validator: _validateEmail,
       controller: controller,
       obscureText: obscureText,
       decoration: InputDecoration(
@@ -34,21 +45,31 @@ class MyTextField extends StatelessWidget {
 }
 
 class MyPasswordTextField extends StatelessWidget {
-  // ignore: prefer_typing_uninitialized_variables
-  final controller;
+  final TextEditingController controller;
   final String hintText;
   final bool obscureText;
   const MyPasswordTextField({
-    super.key,
+    Key? key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
-  });
+  }) : super(key: key);
+
+  static final RegExp passwordRegex =
+      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      validator: (val) => val!.isEmpty ? 'Veuillez remplir ce champ svp' : null,
+      validator: (val) {
+        if (val!.isEmpty) {
+          return 'Cannot proceed with empty field';
+        }
+        if (!passwordRegex.hasMatch(val)) {
+          return 'Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit and one special character';
+        }
+        return null;
+      },
       controller: controller,
       obscureText: obscureText,
       decoration: InputDecoration(

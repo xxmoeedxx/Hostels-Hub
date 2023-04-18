@@ -1,9 +1,10 @@
+import 'package:authui/components/square_tile.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final Function()? onTap;
 
-  const MyButton({super.key, required this.onTap});
+  const MyButton({super.key, required this.onTap, SquareTile? child});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class MyButton extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(seconds: 1),
         child: Container(
-          padding: const EdgeInsets.all(25),
+          padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: const Color.fromARGB(255, 71, 233, 133),
             borderRadius: BorderRadius.circular(8),
@@ -23,7 +24,7 @@ class MyButton extends StatelessWidget {
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 25),
+                  fontSize: 20),
             ),
           ),
         ),
@@ -42,7 +43,7 @@ class MyButtonAgree extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(25),
+        padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 71, 233, 133),
           borderRadius: BorderRadius.circular(8),
@@ -51,7 +52,7 @@ class MyButtonAgree extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
       ),

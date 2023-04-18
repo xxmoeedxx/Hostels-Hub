@@ -5,14 +5,37 @@ import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:authui/pages/map.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+Future<bool> signInWithEmailAndPassword(String email, String password) async {
+  bool successfulSignIn = true;
+  try {
+    UserCredential userCredential =
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
+    // User is signed in, do something with the userCredential.user object
+  } on FirebaseAuthException catch (e) {
+    successfulSignIn = false;
+    if (e.code == 'user-not-found') {
+      print('No user found for that email.');
+    } else if (e.code == 'wrong-password') {
+      print('Wrong password provided for that user.');
+    }
+  } catch (e) {
+    print(e);
+  }
+  return successfulSignIn;
+}
 
 // ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
-  LoginPage({super.key});
-
+  //LoginPage({super.key});
+  LoginPage({Key? key, required this.email}) : super(key: key);
+  final String email;
   // text editing controllers
   final passwordController = TextEditingController();
-
   final double _sigmaX = 5; // from 0-10
   final double _sigmaY = 5; // from 0-10
   final double _opacity = 0.2;
@@ -45,26 +68,26 @@ class LoginPage extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.26),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.17),
                   const Text("Log in",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
                           fontWeight: FontWeight.bold)),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.015),
                   ClipRect(
                     child: BackdropFilter(
                       filter:
                           ImageFilter.blur(sigmaX: _sigmaX, sigmaY: _sigmaY),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        padding: const EdgeInsets.symmetric(horizontal: 1.0),
                         decoration: BoxDecoration(
                             color: Color.fromRGBO(0, 0, 0, 1)
                                 .withOpacity(_opacity),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(30))),
                         width: MediaQuery.of(context).size.width * 0.9,
-                        height: MediaQuery.of(context).size.height * 0.4,
+                        height: MediaQuery.of(context).size.height * 0.45,
                         child: Form(
                           key: _formKey,
                           child: Center(
@@ -79,7 +102,7 @@ class LoginPage extends StatelessWidget {
                                     const CircleAvatar(
                                       radius: 30,
                                       backgroundImage: NetworkImage(
-                                          'https://anmg-production.anmg.xyz/yaza-co-za_sfja9J2vLAtVaGdUPdH5y7gA'),
+                                          'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'),
                                     ),
                                     SizedBox(
                                         width:
@@ -90,16 +113,13 @@ class LoginPage extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       // ignore: prefer_const_literals_to_create_immutables
                                       children: [
-                                        Text("Jane Dow",
+                                        Text(email,
                                             style: TextStyle(
                                                 color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold)),
-                                        const SizedBox(height: 5),
-                                        Text("jane.doe@gmail.com",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 18))
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.035))
                                       ],
                                     )
                                   ]),
@@ -117,11 +137,14 @@ class LoginPage extends StatelessWidget {
                                         0.03),
                                 MyButtonAgree(
                                   text: "Continue",
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => MapPage()));
+                                  onTap: () async {
+                                    if (await signInWithEmailAndPassword(
+                                        email, passwordController.text)) {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => MapPage()));
+                                    }
                                   },
                                 ),
                                 const SizedBox(height: 30),

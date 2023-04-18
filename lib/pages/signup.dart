@@ -27,12 +27,12 @@ Future<void> signUpWithEmail(String email, String password) async {
 }
 
 class Signup extends StatelessWidget {
-  Signup({super.key});
+  Signup({Key? key, required this.email}) : super(key: key);
 
   // text editing controllers
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-
+  final String email;
   final double _sigmaX = 5; // from 0-10
   final double _sigmaY = 5; // from 0-10
   final double _opacity = 0.2;
@@ -77,14 +77,14 @@ class Signup extends StatelessWidget {
                       filter:
                           ImageFilter.blur(sigmaX: _sigmaX, sigmaY: _sigmaY),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
                         decoration: BoxDecoration(
                             color: const Color.fromRGBO(0, 0, 0, 1)
                                 .withOpacity(_opacity),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(30))),
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        height: MediaQuery.of(context).size.height * 0.55,
+                        width: MediaQuery.of(context).size.width * 0.95,
+                        height: MediaQuery.of(context).size.height * 0.50,
                         child: Form(
                           key: _formKey,
                           child: Center(
@@ -100,29 +100,21 @@ class Signup extends StatelessWidget {
                                         color: Colors.white, fontSize: 20),
                                     textAlign: TextAlign.start),
                                 // ignore: prefer_const_constructors
-                                const Text(
-                                  "jane.doe@gmail.com",
+                                Text(
+                                  email,
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold),
                                   textAlign: TextAlign.start,
                                 ),
-                                const SizedBox(height: 30),
-
-                                MyTextField(
-                                  controller: usernameController,
-                                  hintText: 'Email',
-                                  obscureText: false,
-                                ),
-
-                                const SizedBox(height: 10),
+                                const SizedBox(height: 15),
                                 MyPasswordTextField(
                                   controller: passwordController,
                                   hintText: 'Password',
                                   obscureText: true,
                                 ),
-                                const SizedBox(height: 30),
+                                const SizedBox(height: 15),
 
                                 Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -139,7 +131,7 @@ class Signup extends StatelessWidget {
                                                 'By selecting Agree & Continue below, I agree to our ',
                                             style: TextStyle(
                                                 color: Colors.white,
-                                                fontSize: 20),
+                                                fontSize: 15),
                                           ),
                                           TextSpan(
                                               text:
@@ -148,7 +140,7 @@ class Signup extends StatelessWidget {
                                                   color: Color.fromARGB(
                                                       255, 71, 233, 133),
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 20)),
+                                                  fontSize: 15)),
                                         ],
                                       ),
                                     ),
@@ -161,8 +153,10 @@ class Signup extends StatelessWidget {
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) =>
-                                                    LoginPage()));
+                                                builder: (context) => LoginPage(
+                                                      email: usernameController
+                                                          .text,
+                                                    )));
                                       },
                                     ),
                                   ],

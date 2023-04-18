@@ -1,27 +1,49 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_build_context_synchronously
 
 import 'dart:ui';
 
+import 'package:authui/pages/login.dart';
+import 'package:authui/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:authui/components/my_button.dart';
 import 'package:authui/components/my_textfield.dart';
 import 'package:authui/components/square_tile.dart';
 import 'package:authui/pages/signup.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-// void signInWithEmail(String email, String password) async {
-//   try {
-//     UserCredential userCredential =
-//         await FirebaseAuth.instance.signInWithEmailAndPassword(
-//       email: email,
-//       password: password,
-//     );
-//     User user = userCredential.user;
-//     print('Signed in as ${user.email}');
-//   } catch (e) {
-//     print('Error: $e');
-//   }
-// }
+final FirebaseAuth _auth = FirebaseAuth.instance;
+
+Future<bool> checkIfEmailExists(String Email) async {
+  var result = await _auth.fetchSignInMethodsForEmail(Email);
+  return result.isNotEmpty;
+}
+
+final GoogleSignIn _googleSignIn = GoogleSignIn();
+
+Future<UserCredential> signInWithGoogle() async {
+  // Attempt to sign in with Google account.
+  final GoogleSignInAccount? googleSignInAccount = await _googleSignIn.signIn();
+  final GoogleSignInAuthentication googleSignInAuthentication =
+      await googleSignInAccount!.authentication;
+  final AuthCredential credential = GoogleAuthProvider.credential(
+    accessToken: googleSignInAuthentication.accessToken,
+    idToken: googleSignInAuthentication.idToken,
+  );
+  // Authenticate with Firebase using the credential.
+  final UserCredential authResult =
+      await _auth.signInWithCredential(credential);
+  final User? user = authResult.user;
+  if (user != null) {
+    assert(!user.isAnonymous);
+    assert(await user.getIdToken() != null);
+    // Get the user data.
+    final User currentUser = _auth.currentUser!;
+    assert(user.uid == currentUser.uid);
+    print('signInWithGoogle succeeded: $user');
+  }
+  return authResult;
+}
 
 // ignore: must_be_immutable
 class WelcomePage extends StatelessWidget {
@@ -84,8 +106,8 @@ class WelcomePage extends StatelessWidget {
                                   .withOpacity(_opacity),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30))),
-                          width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.63,
+                          width: MediaQuery.of(context).size.width * 0.92,
+                          height: MediaQuery.of(context).size.height * 0.49,
                           child: Form(
                             key: _formKey,
                             child: Center(
@@ -104,24 +126,30 @@ class WelcomePage extends StatelessWidget {
 
                                   // sign in button
                                   MyButton(
-                                    onTap: (() {
+                                    onTap: (() async {
                                       if (_formKey.currentState!.validate()) {
-                                        try {
-                                          FirebaseAuth.instance
-                                              .signInWithEmailAndPassword(
+                                        bool emailExists =
+                                            await checkIfEmailExists(
+                                                usernameController.text);
+                                        if (emailExists) {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => LoginPage(
                                                   email:
-                                                      usernameController.text,
-                                                  password:
-                                                      passwordController.text);
-                                        } catch (e) {
-                                          print('Error: $e');
+                                                      usernameController.text),
+                                            ),
+                                          );
+                                        } else {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => Signup(
+                                                  email:
+                                                      usernameController.text),
+                                            ),
+                                          );
                                         }
-                                        // Navigator.push(
-                                        //   context,
-                                        //   MaterialPageRoute(
-                                        //     builder: (context) => Signup(),
-                                        //   ),
-                                        // );
                                       } else {
                                         //print('not valid');
                                       }
@@ -162,32 +190,27 @@ class WelcomePage extends StatelessWidget {
 
                                   // google + apple sign in buttons
                                   Padding(
-                                    padding: const EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(2.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
-                                      children: const [
-                                        // facebook button
-                                        SquareTile(
-                                            imagePath:
-                                                'assets/images/facebook.png',
-                                            title: "Continue with Facebook"),
-                                        SizedBox(height: 10),
-
+                                      children: [
                                         // google button
                                         SquareTile(
+                                          onTap: () {
+                                            signInWithGoogle().whenComplete(
+                                                () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            MapPage())));
+                                          },
                                           imagePath: 'assets/images/google.png',
-                                          title: "Continue with Google",
+                                          title: 'Continue with Google',
                                         ),
 
                                         SizedBox(height: 10),
-
-                                        // apple button
-                                        SquareTile(
-                                            imagePath:
-                                                'assets/images/apple.png',
-                                            title: "Continue with Apple"),
                                       ],
                                     ),
                                   ),
@@ -213,8 +236,8 @@ class WelcomePage extends StatelessWidget {
                                               'Don\'t have an account?',
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 20),
-                                              textAlign: TextAlign.start,
+                                                  fontSize: 18),
+                                              textAlign: TextAlign.center,
                                             ),
                                             const SizedBox(width: 4),
                                             const Text(
@@ -223,7 +246,8 @@ class WelcomePage extends StatelessWidget {
                                                   color: Color.fromARGB(
                                                       255, 71, 233, 133),
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 20),
+                                                  fontSize: 18),
+                                              textAlign: TextAlign.end,
                                             ),
                                           ],
                                         ),
