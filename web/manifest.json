@@ -1,6 +1,6 @@
 {
-    "name": "authui",
-    "short_name": "authui",
+    "name": "db_project",
+    "short_name": "db_project",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -2,15 +2,15 @@
 
 import 'dart:ui';
 
-import 'package:authui/pages/hostel_list.dart';
-import 'package:authui/pages/login.dart';
-import 'package:authui/pages/map.dart';
+import 'package:db_project/pages/hostel_list.dart';
+import 'package:db_project/pages/login.dart';
+import 'package:db_project/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:authui/components/my_button.dart';
-import 'package:authui/components/my_textfield.dart';
-import 'package:authui/components/square_tile.dart';
-import 'package:authui/pages/signup.dart';
+import 'package:db_project/components/my_button.dart';
+import 'package:db_project/components/my_textfield.dart';
+import 'package:db_project/components/square_tile.dart';
+import 'package:db_project/pages/signup.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;

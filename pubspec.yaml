@@ -1,4 +1,4 @@
-name: authui
+name: db_project
 description: Flutter project to create a login and register UI from dribbble design.
 
 publish_to: 'none' 
@@ -24,6 +24,11 @@ dependencies:
   flutter_inappwebview: ^5.7.2+3
   url_launcher: ^6.1.10
   shared_preferences: ^2.1.0
+  location: ^4.4.0
+  flutter_bloc: ^8.1.2
+  flutter_svg: ^1.0.3
+  geocoding: ^2.1.0
+  image_picker: ^0.8.7+4
 
 dev_dependencies:
   flutter_test:

@@ -1,7 +1,10 @@
 // ignore: file_names
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:authui/pages/hostel_list.dart';
+import 'package:db_project/pages/hostel_list.dart';
+import 'package:image_picker/image_picker.dart';
 
 class HostelDetailsForm extends StatefulWidget {
   @override
@@ -13,6 +16,7 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
 
   final CollectionReference hostelCollection =
       FirebaseFirestore.instance.collection('hostels');
+
   Future<void> _submit() async {
     if (_formKey.currentState!.validate()) {
       try {
@@ -20,19 +24,20 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
           'name': _hostelNameController.text,
           'location': _selectedLocation,
           'address': _addressController.text,
+          'description': _descriptionController.text,
           'isAirConditioned': _isAirConditioned,
           'roomRent': int.parse(_roomRentController.text),
           'totalRooms': int.parse(_totalRoomsController.text),
           'availableRooms': int.parse(_availableRoomsController.text),
           'isFoodMessAvailable': _isFoodMessAvailable,
         });
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Hostel details submitted'),
         ));
         _formKey.currentState!.reset();
       } catch (e) {
         print(e);
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Error submitting hostel details'),
         ));
       }
@@ -46,6 +51,7 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
   final TextEditingController _availableRoomsController =
       TextEditingController();
   final TextEditingController _addressController = TextEditingController();
+  final TextEditingController _descriptionController = TextEditingController();
 
   // DropdownButton variables
   final List<String> _locations = ['Lahore', 'Islamabad']; // Option 2
@@ -54,6 +60,23 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
   // Switch variable
   bool _isAirConditioned = false;
   bool _isFoodMessAvailable = false;
+  List<File> _images = [];
+
+  Future<void> _pickImage() async {
+    final pickedFile =
+        await ImagePicker().getImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        _images.add(File(pickedFile.path));
+      });
+    }
+  }
+
+  void _removeImage(int index) {
+    setState(() {
+      _images.removeAt(index);
+    });
+  }
 
   @override
   void dispose() {
@@ -62,6 +85,7 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
     _totalRoomsController.dispose();
     _availableRoomsController.dispose();
     _addressController.dispose();
+    _descriptionController.dispose();
     super.dispose();
   }
 
@@ -70,22 +94,59 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        shape: ContinuousRectangleBorder(
+        shape: const ContinuousRectangleBorder(
             borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
           bottomRight: Radius.circular(40),
         )),
         title: const Text('Hostel Details'),
-        backgroundColor: Color.fromARGB(255, 7, 6, 68),
+        backgroundColor: const Color.fromARGB(255, 7, 6, 68),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           child: Form(
             key: _formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                ElevatedButton(
+                  onPressed: _pickImage,
+                  child: Text('Insert Image'),
+                ),
+                // Flexible(
+                //   fit: FlexFit.loose,
+                //   child: GridView.builder(
+                //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                //       crossAxisCount: 3,
+                //       mainAxisSpacing: 10,
+                //       crossAxisSpacing: 10,
+                //     ),
+                //     itemCount: _images.length,
+                //     itemBuilder: (BuildContext context, int index) {
+                //       return Stack(
+                //         children: [
+                //           Image.file(_images[index], fit: BoxFit.cover),
+                //           Positioned(
+                //             top: 0,
+                //             right: 0,
+                //             child: GestureDetector(
+                //               onTap: () => _removeImage(index),
+                //               child: Container(
+                //                 decoration: BoxDecoration(
+                //                   color: Colors.white,
+                //                   shape: BoxShape.circle,
+                //                 ),
+                //                 child: Icon(Icons.clear, color: Colors.red),
+                //               ),
+                //             ),
+                //           ),
+                //         ],
+                //       );
+                //     },
+                //   ),
+                // ),
+                // SizedBox(height: 20),
                 const Text(
                   'Basic Information',
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
@@ -103,9 +164,22 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
                   },
                 ),
                 const SizedBox(height: 16.0),
+                TextFormField(
+                  controller: _descriptionController,
+                  decoration: const InputDecoration(
+                    labelText: 'Description',
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter hostel description';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16.0),
                 Text(
                   'Location',
-                  style: Theme.of(context).textTheme.subtitle1,
+                  style: Theme.of(context).textTheme.titleMedium,
                 ),
                 const SizedBox(height: 12.0),
                 DropdownButtonFormField(
@@ -153,7 +227,7 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Air Conditioned Rooms'),
+                    const Text('Air Conditioned Rooms'),
                     Switch(
                       value: _isAirConditioned,
                       onChanged: (value) {
@@ -167,7 +241,7 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Food Mess Available'),
+                    const Text('Food Mess Available'),
                     Switch(
                       value: _isFoodMessAvailable,
                       onChanged: (value) {

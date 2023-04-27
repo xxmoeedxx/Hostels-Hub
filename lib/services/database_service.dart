@@ -35,6 +35,7 @@ class DatabaseService {
 
 class Hostel {
   final String name;
+  final String description;
   final String location;
   final String address;
   final int roomRent;
@@ -45,6 +46,7 @@ class Hostel {
 
   Hostel(
       {required this.name,
+      required this.description,
       required this.location,
       required this.address,
       required this.roomRent,
@@ -57,6 +59,7 @@ class Hostel {
     Map data = doc.data() as Map<String, dynamic>;
     return Hostel(
       name: data['name'] ?? '',
+      description: data['description'] ?? '',
       location: data['location'] ?? '',
       address: data['address'] ?? '',
       roomRent: data['roomRent'] ?? 0,

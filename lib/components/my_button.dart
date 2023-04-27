@@ -1,4 +1,4 @@
-import 'package:authui/components/square_tile.dart';
+import 'package:db_project/components/square_tile.dart';
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {

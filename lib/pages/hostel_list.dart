@@ -1,9 +1,8 @@
-import 'package:authui/pages/Questions.dart';
+import 'package:db_project/pages/Questions.dart';
 import 'package:flutter/material.dart';
-import 'package:authui/services/database_service.dart';
-import 'package:authui/pages/map.dart';
-import 'package:authui/pages/bottom_bar.dart';
-import 'package:authui/pages/sidebar.dart';
+import 'package:db_project/services/database_service.dart';
+import 'package:db_project/pages/map.dart';
+import 'package:db_project/pages/bottom_bar.dart';
 //import 'package:hostel_app/hostel.dart';
 
 class HostelListPage extends StatefulWidget {
@@ -27,106 +26,117 @@ class _HostelListPageState extends State<HostelListPage> {
     setState(() {
       _selectedHostel = hostel;
     });
-    showDialog(
+
+    final double dialogHeight = 400.0;
+    final double screenHeight = MediaQuery.of(context).size.height - 40;
+
+    showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
       builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(hostel.name),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Address:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '${hostel.address}, ${hostel.location}',
-                style: TextStyle(
-                  color: Colors.grey[700],
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Room Rent:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                'Rs. ${hostel.roomRent}/month',
-                style: TextStyle(
-                  color: Colors.grey[700],
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Available Rooms:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '${hostel.availableRooms}',
-                style: TextStyle(
-                  color: Colors.grey[700],
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Air Conditioned:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '${hostel.isAirConditioned}',
-                style: TextStyle(
-                  color: Colors.grey[700],
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                'Food Mess Available:',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '${hostel.isFoodMessAvailable}',
-                style: TextStyle(
-                  color: Colors.grey[700],
-                ),
-              ),
-              // Add more attributes as needed
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  _selectedHostel = null;
-                });
-                Navigator.of(context).pop();
-              },
-              child: const Text('Close'),
+        return Padding(
+          padding:
+              EdgeInsets.only(top: MediaQuery.of(context).padding.top + 15.0),
+          child: Scaffold(
+            appBar: AppBar(
+              elevation: 0,
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.black,
             ),
-          ],
+            body: AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              height: _selectedHostel != null
+                  ? MediaQuery.of(context).size.height
+                  : 0.0,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset('assets/images/pic3.png'),
+                      Text(
+                        hostel.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30.0,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Description:',
+                        content: hostel.description,
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Address:',
+                        content: '${hostel.address}, ${hostel.location}',
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Room Rent:',
+                        content: 'Rs. ${hostel.roomRent}/month',
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Available Rooms:',
+                        content:
+                            '${hostel.availableRooms}/${hostel.totalRooms}',
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Air Conditioned:',
+                        content: '${hostel.isAirConditioned}',
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Food Mess Available:',
+                        content: '${hostel.isFoodMessAvailable}',
+                      ),
+                      const SizedBox(height: 16),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       },
     );
   }
 
-  void _onSidebarItemTapped(int index) {
-    // Handle sidebar item tap here
-    print('Tapped item $index');
+  Widget _buildDetailsSection({
+    required String title,
+    required String content,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          content,
+          style: const TextStyle(
+            color: Colors.grey,
+            fontSize: 16,
+          ),
+        ),
+      ],
+    );
   }
 
   @override
@@ -172,6 +182,7 @@ class _HostelListPageState extends State<HostelListPage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
+        backgroundColor: const Color.fromARGB(255, 7, 6, 68),
         shape: const ContinuousRectangleBorder(
             borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),
@@ -180,13 +191,6 @@ class _HostelListPageState extends State<HostelListPage> {
         title: const Text(
           'Hostels',
           style: TextStyle(fontSize: 20),
-        ),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => MapPage()));
-          },
         ),
         actions: <Widget>[
           Expanded(
@@ -315,42 +319,96 @@ class _HostelListPageState extends State<HostelListPage> {
             ),
           ),
         ],
-        backgroundColor: const Color.fromARGB(255, 7, 6, 68),
       ),
-      body: Stack(children: [
-        _isLoading
-            ? const Center(
-                child: CircularProgressIndicator(),
-              )
-            : Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.white,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Hostel list
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: _getFilteredHostels().length,
-                        itemBuilder: (context, index) {
-                          Hostel hostel = _getFilteredHostels()[index];
-                          return ListTile(
-                            title: Text(hostel.name,
-                                style: const TextStyle(color: Colors.black)),
-                            subtitle: Text(hostel.location),
-                            trailing: Text('Rs. ${hostel.roomRent}/month'),
-                            onTap: () => _showHostelDetails(hostel),
-                          );
-                        },
+
+      body: Stack(
+        children: [
+          _isLoading
+              ? const Center(
+                  child: CircularProgressIndicator(),
+                )
+              : Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      // Header
+                      const Padding(
+                        padding: EdgeInsets.all(6.0),
                       ),
-                    ),
-                    // Filter options
-                  ],
-                ),
-              )
-      ]),
+                      // Hostel list
+                      Expanded(
+                        child: ListView.builder(
+                          itemCount: _getFilteredHostels().length,
+                          itemBuilder: (context, index) {
+                            Hostel hostel = _getFilteredHostels()[index];
+                            return InkWell(
+                              onTap: () {
+                                _showHostelDetails(hostel);
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[200],
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                margin: const EdgeInsets.symmetric(
+                                    horizontal: 12.0, vertical: 5.0),
+                                child: ListTile(
+                                  title: Text(
+                                    hostel.name,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16.0,
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  subtitle: Text(
+                                    hostel.location,
+                                    style: const TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                  trailing: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      const Text(
+                                        "From",
+                                        style: TextStyle(
+                                          color: Colors.grey,
+                                          fontSize: 12.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Rs. ${hostel.roomRent}/month",
+                                        style: const TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 16.0,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      // Filter options
+                      const Padding(
+                        padding: EdgeInsets.all(16.0),
+                      ),
+                    ],
+                  ),
+                )
+        ],
+      ),
+
       // floatingActionButton: AnimatedSidebar(
       //   icons: [
       //     Icons.home,
@@ -366,20 +424,7 @@ class _HostelListPageState extends State<HostelListPage> {
       //   ],
       //   onTap: _onSidebarItemTapped,
       // ),
-      bottomNavigationBar: const AnimatedBottomBar(
-        icons: [
-          Icons.home,
-          Icons.search,
-          Icons.notifications,
-          Icons.person,
-        ],
-        labels: [
-          'Home',
-          'Search',
-          'Notifications',
-          'Profile',
-        ],
-      ),
+      bottomNavigationBar: const AnimatedBottomBar(),
     );
   }
 }

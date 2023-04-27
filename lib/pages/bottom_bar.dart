@@ -1,24 +1,29 @@
-import 'package:authui/pages/hostel_list.dart';
-import 'package:authui/pages/map.dart';
-import 'package:authui/pages/profile_page.dart';
+import 'package:db_project/pages/hostel_list.dart';
+import 'package:db_project/pages/map2.dart';
+import 'package:db_project/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedBottomBar extends StatefulWidget {
-  final List<IconData> icons;
-  final List<String> labels;
-
-  const AnimatedBottomBar({
-    Key? key,
-    required this.icons,
-    required this.labels,
-  }) : super(key: key);
+  const AnimatedBottomBar({Key? key}) : super(key: key);
 
   @override
   _AnimatedBottomBarState createState() => _AnimatedBottomBarState();
 }
 
 class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
-  int _currentIndex = 0;
+  static int _currentIndex = 0;
+  final List<IconData> _icons = [
+    Icons.home,
+    Icons.map,
+    Icons.notifications,
+    Icons.person,
+  ];
+  final List<String> _labels = [
+    'Hostel List',
+    'Map',
+    'Notifications',
+    'Profile',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +33,9 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
         borderRadius: BorderRadius.circular(30),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color.fromARGB(255, 7, 6, 68),
-          selectedItemColor: Color.fromARGB(255, 179, 217, 248),
-          unselectedItemColor: Color.fromARGB(209, 255, 255, 255),
+          backgroundColor: const Color.fromARGB(255, 7, 6, 68),
+          selectedItemColor: const Color.fromARGB(255, 179, 217, 248),
+          unselectedItemColor: const Color.fromARGB(209, 255, 255, 255),
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
@@ -39,17 +44,10 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => HostelListPage()));
               } else if (index == 1) {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => MapPage()));
-              } else
-              // if (index == 2) {
-              //   Navigator.push(
-              //       context,
-              //       MaterialPageRoute(
-              //           builder: (context) => const ProfilePage()));
-              // }
-              if (index == 3) {
-                Navigator.push(
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => const MapPage()));
+              } else if (index == 3) {
+                Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                         builder: (context) => const ProfilePage()));
@@ -57,21 +55,20 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
             });
           },
           items: List.generate(
-            widget.icons.length,
+            _icons.length,
             (index) => BottomNavigationBarItem(
               icon: AnimatedContainer(
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 height: _currentIndex == index ? 30 : 20,
                 child: Icon(
-                  widget.icons[index],
+                  _icons[index],
                 ),
               ),
-              label: widget.labels[index],
+              label: _labels[index],
             ),
           ),
         ),
       ),
     );
-    const SizedBox(height: 55);
   }
 }

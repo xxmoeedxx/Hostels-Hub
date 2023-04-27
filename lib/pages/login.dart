@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'dart:ui';
-import 'package:authui/components/my_button.dart';
-import 'package:authui/components/my_textfield.dart';
-import 'package:authui/pages/hostel_list.dart';
+import 'package:db_project/components/my_button.dart';
+import 'package:db_project/components/my_textfield.dart';
+import 'package:db_project/pages/hostel_list.dart';
 import 'package:flutter/material.dart';
-import 'package:authui/pages/map.dart';
+import 'package:db_project/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 Future<bool> signInWithEmailAndPassword(String email, String password) async {

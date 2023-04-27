@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:authui/pages/login.dart';
+import 'package:db_project/pages/login.dart';
 import 'package:flutter/material.dart';
-import 'package:authui/components/my_button.dart';
-import 'package:authui/components/my_textfield.dart';
+import 'package:db_project/components/my_button.dart';
+import 'package:db_project/components/my_textfield.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // ignore: must_be_immutable
 
@@ -150,7 +150,7 @@ class Signup extends StatelessWidget {
                                       onTap: () {
                                         signUpWithEmail(usernameController.text,
                                             passwordController.text);
-                                        Navigator.push(
+                                        Navigator.pushReplacement(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) => LoginPage(

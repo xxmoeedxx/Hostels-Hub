@@ -1,5 +1,6 @@
-import 'package:authui/pages/login.dart';
-import 'package:authui/pages/welcome.dart';
+import 'package:db_project/pages/bottom_bar.dart';
+import 'package:db_project/pages/login.dart';
+import 'package:db_project/pages/welcome.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -142,6 +143,7 @@ class _ProfilePageState extends State<ProfilePage>
           ),
         ),
       ),
+      bottomNavigationBar: const AnimatedBottomBar(),
     );
   }
 }

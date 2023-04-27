@@ -1,21 +1,19 @@
-import 'package:authui/pages/hostel_list.dart';
-import 'package:authui/pages/map.dart';
-import 'package:authui/pages/welcome.dart';
+import 'package:db_project/pages/hostel_list.dart';
+import 'package:db_project/pages/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MaterialApp(
-      home: _auth.currentUser == null ? WelcomePage() : HostelListPage()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -29,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Hostels Hub',
       debugShowCheckedModeBanner: false,
-      home: WelcomePage(),
+      home: user == null ? WelcomePage() : HostelListPage(),
     );
   }
 }
