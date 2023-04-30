@@ -200,12 +200,32 @@ class WelcomePage extends StatelessWidget {
                                         // google button
                                         SquareTile(
                                           onTap: () async {
-                                            signInWithGoogle().whenComplete(
-                                                () => Navigator.pushReplacement(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            HostelListPage())));
+                                            try {
+                                              signInWithGoogle();
+                                              () => Navigator.pushReplacement(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          HostelListPage()));
+                                            } catch (e) {
+                                              showDialog(
+                                                  context: context,
+                                                  builder: (context) =>
+                                                      AlertDialog(
+                                                        title:
+                                                            const Text('Error'),
+                                                        content: const Text(
+                                                            'An error occurred. Please try again later.'),
+                                                        actions: [
+                                                          TextButton(
+                                                              onPressed: () =>
+                                                                  Navigator.pop(
+                                                                      context),
+                                                              child: const Text(
+                                                                  'OK'))
+                                                        ],
+                                                      ));
+                                            }
                                           },
                                           imagePath: 'assets/images/google.png',
                                           title: 'Continue with Google',

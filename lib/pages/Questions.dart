@@ -114,39 +114,40 @@ class _HostelDetailsFormState extends State<HostelDetailsForm> {
                   onPressed: _pickImage,
                   child: Text('Insert Image'),
                 ),
-                // Flexible(
-                //   fit: FlexFit.loose,
-                //   child: GridView.builder(
-                //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                //       crossAxisCount: 3,
-                //       mainAxisSpacing: 10,
-                //       crossAxisSpacing: 10,
-                //     ),
-                //     itemCount: _images.length,
-                //     itemBuilder: (BuildContext context, int index) {
-                //       return Stack(
-                //         children: [
-                //           Image.file(_images[index], fit: BoxFit.cover),
-                //           Positioned(
-                //             top: 0,
-                //             right: 0,
-                //             child: GestureDetector(
-                //               onTap: () => _removeImage(index),
-                //               child: Container(
-                //                 decoration: BoxDecoration(
-                //                   color: Colors.white,
-                //                   shape: BoxShape.circle,
-                //                 ),
-                //                 child: Icon(Icons.clear, color: Colors.red),
-                //               ),
-                //             ),
-                //           ),
-                //         ],
-                //       );
-                //     },
-                //   ),
-                // ),
-                // SizedBox(height: 20),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 200,
+                  child: GridView.builder(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      mainAxisSpacing: 0,
+                      crossAxisSpacing: 10,
+                    ),
+                    itemCount: _images.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Stack(
+                        children: [
+                          Image.file(_images[index], fit: BoxFit.cover),
+                          Positioned(
+                            top: 0,
+                            right: 0,
+                            child: GestureDetector(
+                              onTap: () => _removeImage(index),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Icon(Icons.clear, color: Colors.red),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(height: 20),
                 const Text(
                   'Basic Information',
                   style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),

@@ -1,8 +1,10 @@
 import 'package:db_project/pages/Questions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:db_project/services/database_service.dart';
-import 'package:db_project/pages/map.dart';
 import 'package:db_project/pages/bottom_bar.dart';
+import 'package:provider/provider.dart';
+import '../services/user_provider.dart';
 //import 'package:hostel_app/hostel.dart';
 
 class HostelListPage extends StatefulWidget {
@@ -22,11 +24,22 @@ class _HostelListPageState extends State<HostelListPage> {
   late bool _isAirConditionedFilterEnabled;
   late bool _isFoodMessAvailableFilterEnabled;
   late int _roomRentFilter;
-  void _showHostelDetails(Hostel hostel) {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final DatabaseService _db = DatabaseService();
+  Future<void> getUserData() async {
+    User? user = _auth.currentUser;
+    UserProvider userProvider =
+        // ignore: use_build_context_synchronously
+        Provider.of<UserProvider>(context, listen: false);
+    Future<Users?> userFuture = _db.getUserInfo(user!.uid);
+    Users? _user = await userFuture;
+    userProvider.setCurrentUser(_user!);
+  }
+
+  Future<void> _showHostelDetails(Hostel hostel) async {
     setState(() {
       _selectedHostel = hostel;
     });
-
     final double dialogHeight = 400.0;
     final double screenHeight = MediaQuery.of(context).size.height - 40;
 
@@ -147,7 +160,7 @@ class _HostelListPageState extends State<HostelListPage> {
     _isAirConditionedFilterEnabled = false;
     _isFoodMessAvailableFilterEnabled = false;
     _roomRentFilter = 0;
-
+    getUserData();
     // Fetch all hostels from database
     _isLoading = true;
     _hostelStream = DatabaseService().getHostels();

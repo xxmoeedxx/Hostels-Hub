@@ -1,5 +1,5 @@
 import 'package:db_project/pages/hostel_list.dart';
-import 'package:db_project/pages/map2.dart';
+import 'package:db_project/pages/map.dart';
 import 'package:db_project/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -47,10 +47,8 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const MapPage()));
               } else if (index == 3) {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ProfilePage()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => ProfilePage()));
               }
             });
           },

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/media/moeed/66C870D9C870A8C7/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
+            "outputFile": "/media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "/home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/res/values-uk/values.xml",

@@ -1,12 +1,13 @@
 import 'package:db_project/pages/bottom_bar.dart';
-import 'package:db_project/pages/login.dart';
 import 'package:db_project/pages/welcome.dart';
+import 'package:db_project/services/database_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:db_project/services/user_provider.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({Key? key}) : super(key: key);
-
+  ProfilePage({Key? key}) : super(key: key);
   @override
   _ProfilePageState createState() => _ProfilePageState();
 }
@@ -15,7 +16,6 @@ class _ProfilePageState extends State<ProfilePage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
-
   @override
   void initState() {
     super.initState();
@@ -47,26 +47,16 @@ class _ProfilePageState extends State<ProfilePage>
             children: [
               Stack(
                 children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 7, 6, 68),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(40),
-                        bottomRight: Radius.circular(40),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    top: MediaQuery.of(context).size.height * 0.2,
-                    left: MediaQuery.of(context).size.width * 0.4,
+                  AnimatedContainer(
+                    height: MediaQuery.of(context).size.height * 0.25,
+                    duration: Duration.zero,
                     child: ScaleTransition(
                       scale: _animation,
                       child: const CircleAvatar(
-                        radius: 50,
-                        backgroundColor: Colors.white,
+                        radius: 60,
+                        backgroundColor: Color.fromARGB(255, 7, 6, 68),
                         child: CircleAvatar(
-                          radius: 48,
+                          radius: 55,
                           backgroundImage:
                               NetworkImage('https://i.pravatar.cc/150?img=3'),
                         ),
@@ -75,67 +65,67 @@ class _ProfilePageState extends State<ProfilePage>
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
-              const Text(
-                'John Doe',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Follow',
-                      style: TextStyle(),
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  ElevatedButton(
-                    onPressed: () {},
-                    child: const Text('Message'),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              const ListTile(
-                leading: Icon(Icons.mail),
-                title: Text('johndoe@gmail.com'),
-              ),
-              const ListTile(
-                leading: Icon(Icons.phone),
-                title: Text('+1234567890'),
-              ),
-              const ListTile(
-                leading: Icon(Icons.location_on),
-                title: Text('New York, NY'),
-              ),
-              const SizedBox(height: 20),
-              TextButton(
-                onPressed: () async {
-                  // perform logout action here
-                  final FirebaseAuth _auth = FirebaseAuth.instance;
-                  await _auth.signOut();
-                  // ignore: use_build_context_synchronously
-                  Navigator.pushAndRemoveUntil(context,
-                      MaterialPageRoute(builder: (context) => WelcomePage()),
-                      (root) {
-                    return false;
-                  });
-                },
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Container(
-                  alignment: Alignment.bottomLeft,
-                  child: const Text(
-                    'Logout',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  padding: const EdgeInsets.all(25),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 7, 6, 68),
+                    borderRadius: BorderRadius.circular(20), // Rounded borders
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 20),
+                      Text(
+                        Provider.of<UserProvider>(context).currentUser?.name ??
+                            '-',
+                        style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white, // White text color
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      ListTile(
+                        leading: const Icon(Icons.phone,
+                            color: Colors.white), // White icon color
+                        title: Text(
+                          Provider.of<UserProvider>(context)
+                                  .currentUser
+                                  ?.contact ??
+                              '-',
+                          style: const TextStyle(
+                              color: Colors.white), // White text color
+                        ),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.15),
+                      TextButton(
+                        onPressed: () async {
+                          // perform logout action here
+                          final FirebaseAuth _auth = FirebaseAuth.instance;
+                          await _auth.signOut();
+                          // ignore: use_build_context_synchronously
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => WelcomePage()), (root) {
+                            return false;
+                          });
+                        },
+                        child: const Text(
+                          'Logout',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05),
+                    ],
                   ),
                 ),
               ),

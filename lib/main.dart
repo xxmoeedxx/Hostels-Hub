@@ -1,6 +1,8 @@
 import 'package:db_project/pages/hostel_list.dart';
 import 'package:db_project/pages/welcome.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:db_project/services/user_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -24,10 +26,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hostels Hub',
-      debugShowCheckedModeBanner: false,
-      home: user == null ? WelcomePage() : HostelListPage(),
+    return ChangeNotifierProvider(
+      create: (_) => UserProvider(),
+      child: MaterialApp(
+        title: 'Hostels Hub',
+        debugShowCheckedModeBanner: false,
+        home: user == null ? WelcomePage() : HostelListPage(),
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/media/moeed/66C870D9C870A8C7/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "/media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "/home/moeed/.gradle/caches/transforms-3/e3cfa281bd544446745c6bdd375bd531/transformed/browser-1.4.0/res/values-lv/values-lv.xml",

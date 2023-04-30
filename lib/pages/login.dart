@@ -5,30 +5,11 @@ import 'package:db_project/components/my_button.dart';
 import 'package:db_project/components/my_textfield.dart';
 import 'package:db_project/pages/hostel_list.dart';
 import 'package:flutter/material.dart';
-import 'package:db_project/pages/map.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
+import 'package:db_project/services/user_provider.dart';
 
-Future<bool> signInWithEmailAndPassword(String email, String password) async {
-  bool successfulSignIn = true;
-  try {
-    UserCredential userCredential =
-        await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: email,
-      password: password,
-    );
-    // User is signed in, do something with the userCredential.user object
-  } on FirebaseAuthException catch (e) {
-    successfulSignIn = false;
-    if (e.code == 'user-not-found') {
-      print('No user found for that email.');
-    } else if (e.code == 'wrong-password') {
-      print('Wrong password provided for that user.');
-    }
-  } catch (e) {
-    print(e);
-  }
-  return successfulSignIn;
-}
+import '../services/database_service.dart';
 
 // ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
@@ -41,7 +22,7 @@ class LoginPage extends StatelessWidget {
   final double _sigmaY = 5; // from 0-10
   final double _opacity = 0.2;
   final _formKey = GlobalKey<FormState>();
-
+  final DatabaseService _db = DatabaseService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -137,18 +118,68 @@ class LoginPage extends StatelessWidget {
                                     height: MediaQuery.of(context).size.height *
                                         0.03),
                                 MyButtonAgree(
-                                  text: "Continue",
-                                  onTap: () async {
-                                    if (await signInWithEmailAndPassword(
-                                        email, passwordController.text)) {
-                                      Navigator.pushReplacement(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  HostelListPage()));
-                                    }
-                                  },
-                                ),
+                                    text: "Continue",
+                                    onTap: () async {
+                                      try {
+                                        UserCredential userCredential =
+                                            await FirebaseAuth.instance
+                                                .signInWithEmailAndPassword(
+                                          email: email,
+                                          password: passwordController.text,
+                                        );
+
+                                        UserProvider userProvider =
+                                            // ignore: use_build_context_synchronously
+                                            Provider.of<UserProvider>(context,
+                                                listen: false);
+                                        Future<Users?> userFuture =
+                                            _db.getUserInfo(
+                                                userCredential.user!.uid);
+                                        Users? user = await userFuture;
+                                        userProvider.setCurrentUser(user!);
+
+                                        Navigator.pushReplacement(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    HostelListPage()));
+                                      } on FirebaseAuthException catch (e) {
+                                        if (e.code == 'wrong-password') {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) => AlertDialog(
+                                                    title: const Text(
+                                                        'Invalid Password'),
+                                                    content: const Text(
+                                                        'The password you entered is incorrect.'),
+                                                    actions: [
+                                                      TextButton(
+                                                          onPressed: () =>
+                                                              Navigator.pop(
+                                                                  context),
+                                                          child:
+                                                              const Text('OK'))
+                                                    ],
+                                                  ));
+                                        }
+                                      } catch (e) {
+                                        print(e.toString());
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) => AlertDialog(
+                                                  title: const Text('Error'),
+                                                  content: const Text(
+                                                      'An error occurred. Please try again later.'),
+                                                  actions: [
+                                                    TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                context),
+                                                        child: const Text('OK'))
+                                                  ],
+                                                ));
+                                      }
+                                    }),
                                 const SizedBox(height: 30),
                                 const Text('Forgot Password?',
                                     style: TextStyle(
