@@ -1,76 +1,5 @@
-// import 'package:cloud_firestore/cloud_firestore.dart';
-
-// class DatabaseService {
-//   final FirebaseFirestore _db = FirebaseFirestore.instance;
-
-//   // Create a new hostel document in the database
-//   Future<void> createHostel(
-//       {required String name,
-//       required String location,
-//       required String address,
-//       required int roomRent,
-//       required int totalRooms,
-//       required int availableRooms,
-//       required bool isAirConditioned,
-//       required bool isFoodMessAvailable}) async {
-//     await _db.collection('hostels').add({
-//       'name': name,
-//       'location': location,
-//       'address': address,
-//       'roomRent': roomRent,
-//       'totalRooms': totalRooms,
-//       'availableRooms': availableRooms,
-//       'isAirConditioned': isAirConditioned,
-//       'isFoodMessAvailable': isFoodMessAvailable,
-//     });
-//   }
-
-//   // Fetch all hostels from the database
-//   Stream<List<Hostel>> getHostels() {
-//     return _db.collection('hostels').snapshots().map((snapshot) {
-//       return snapshot.docs.map((doc) => Hostel.fromFirestore(doc)).toList();
-//     });
-//   }
-// }
-
-// class Hostel {
-//   final String name;
-//   final String description;
-//   final String location;
-//   final String address;
-//   final int roomRent;
-//   final int totalRooms;
-//   final int availableRooms;
-//   final bool isAirConditioned;
-//   final bool isFoodMessAvailable;
-
-//   Hostel(
-//       {required this.name,
-//       required this.description,
-//       required this.location,
-//       required this.address,
-//       required this.roomRent,
-//       required this.totalRooms,
-//       required this.availableRooms,
-//       required this.isAirConditioned,
-//       required this.isFoodMessAvailable});
-
-//   factory Hostel.fromFirestore(DocumentSnapshot doc) {
-//     Map data = doc.data() as Map<String, dynamic>;
-//     return Hostel(
-//       name: data['name'] ?? '',
-//       description: data['description'] ?? '',
-//       location: data['location'] ?? '',
-//       address: data['address'] ?? '',
-//       roomRent: data['roomRent'] ?? 0,
-//       totalRooms: data['totalRooms'] ?? 0,
-//       availableRooms: data['availableRooms'] ?? 0,
-//       isAirConditioned: data['isAirConditioned'] ?? false,
-//       isFoodMessAvailable: data['isFoodMessAvailable'] ?? false,
-//     );
-//   }
-// }
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:uuid/uuid.dart';
 
 class DatabaseService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
@@ -91,7 +20,8 @@ class DatabaseService {
     required List<String> images,
     required String ownerEmail,
   }) async {
-    await _db.collection('hostels').add({
+    final String hostelId = Uuid().v4();
+    await _db.collection('hostels').doc(hostelId).set({
       'name': name,
       'description': description,
       'location': location,
@@ -106,6 +36,43 @@ class DatabaseService {
       'images': images,
       'ownerEmail': ownerEmail,
     });
+  }
+
+  Future<void> updateHostel({
+    required String hostelId,
+    required String name,
+    required String description,
+    required String location,
+    required String address,
+    required int roomRent,
+    required int totalRooms,
+    required int availableRooms,
+    required bool isAirConditioned,
+    required bool isFoodMessAvailable,
+    required bool isWifiAvailable,
+    required String gender,
+    required List<String> images,
+    required String ownerEmail,
+  }) async {
+    await _db.collection('hostels').doc(hostelId).update({
+      'name': name,
+      'description': description,
+      'location': location,
+      'address': address,
+      'roomRent': roomRent,
+      'totalRooms': totalRooms,
+      'availableRooms': availableRooms,
+      'isAirConditioned': isAirConditioned,
+      'isFoodMessAvailable': isFoodMessAvailable,
+      'isWifiAvailable': isWifiAvailable,
+      'gender': gender,
+      'images': images,
+      'ownerEmail': ownerEmail,
+    });
+  }
+
+  Future<void> deleteHostel(String hostelId) async {
+    await _db.collection('hostels').doc(hostelId).delete();
   }
 
   // Fetch all hostels from the database
@@ -134,6 +101,33 @@ class DatabaseService {
     return _db.collection('users').snapshots().map((snapshot) {
       return snapshot.docs.map((doc) => Users.fromFirestore(doc)).toList();
     });
+  }
+
+  Future<DocumentSnapshot?> getUser(String uid) async {
+    final userRef = FirebaseFirestore.instance.collection('users').doc(uid);
+    final userDoc = await userRef.get();
+    if (userDoc.exists) {
+      return userDoc;
+    } else {
+      return null;
+    }
+  }
+
+  Future<void> updateUser({
+    required String uid,
+    String name = '',
+    String contact = '',
+    String profilePicture = '',
+  }) async {
+    try {
+      await _db.collection('users').doc(uid).update({
+        'name': name,
+        'contact': contact,
+        'profilePicture': profilePicture,
+      });
+    } catch (e) {
+      print('Error updating user: $e');
+    }
   }
 
   Future<Users?> getUserInfo(String uid) async {
@@ -185,9 +179,10 @@ class Users {
 
   factory Users.fromFirestore(DocumentSnapshot doc) {
     Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+    print('Fetched data: $data');
     return Users(
       name: data['name'] ?? '',
-      uid: data['uid'] ?? '',
+      uid: doc.id,
       contact: data['contact'] ?? '',
       profilePicture: data['profilePicture'] ?? '',
     );
@@ -238,7 +233,7 @@ class Hostel {
   final String gender;
   final List<String> images;
   final String ownerEmail;
-
+  final String hostelId;
   Hostel({
     required this.name,
     required this.description,
@@ -253,6 +248,7 @@ class Hostel {
     required this.gender,
     required this.images,
     required this.ownerEmail,
+    required this.hostelId,
   });
 
   factory Hostel.fromFirestore(DocumentSnapshot doc) {
@@ -271,6 +267,7 @@ class Hostel {
       gender: data['gender'] ?? '',
       images: List<String>.from(data['images'] ?? []),
       ownerEmail: data['ownerEmail'] ?? '',
+      hostelId: doc.id,
     );
   }
 }

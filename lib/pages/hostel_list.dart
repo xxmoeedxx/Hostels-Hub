@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:db_project/services/database_service.dart';
 import 'package:db_project/pages/bottom_bar.dart';
 import 'package:provider/provider.dart';
+import '../components/ImageCarousels.dart';
 import '../services/user_provider.dart';
 //import 'package:hostel_app/hostel.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class HostelListPage extends StatefulWidget {
   @override
@@ -19,10 +21,14 @@ class _HostelListPageState extends State<HostelListPage> {
   late bool _isLoading;
   String _selectedCity = "Lahore";
   final List<String> _cities = ['Lahore', 'Islamabad'];
+  String _selectedGender = "Male";
+  final List<String> _genders = ['Male', 'Female'];
+  final List<String> images = [];
   late bool _showAllEnabled = true;
   // Filter options
   late bool _isAirConditionedFilterEnabled;
   late bool _isFoodMessAvailableFilterEnabled;
+  late bool _isWifiAvailableFilterEnabled;
   late int _roomRentFilter;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final DatabaseService _db = DatabaseService();
@@ -40,8 +46,6 @@ class _HostelListPageState extends State<HostelListPage> {
     setState(() {
       _selectedHostel = hostel;
     });
-    final double dialogHeight = 400.0;
-    final double screenHeight = MediaQuery.of(context).size.height - 40;
 
     showModalBottomSheet(
       context: context,
@@ -58,16 +62,10 @@ class _HostelListPageState extends State<HostelListPage> {
             ),
             body: AnimatedContainer(
               duration: const Duration(milliseconds: 300),
+              width: MediaQuery.of(context).size.width,
               height: _selectedHostel != null
                   ? MediaQuery.of(context).size.height
                   : 0.0,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(20.0),
-                  topRight: Radius.circular(20.0),
-                ),
-              ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SingleChildScrollView(
@@ -75,7 +73,7 @@ class _HostelListPageState extends State<HostelListPage> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset('assets/images/pic3.png'),
+                      ImageCarousel(images: hostel.images),
                       Text(
                         hostel.name,
                         style: const TextStyle(
@@ -95,6 +93,11 @@ class _HostelListPageState extends State<HostelListPage> {
                       ),
                       const SizedBox(height: 16),
                       _buildDetailsSection(
+                        title: 'Gender:',
+                        content: hostel.gender,
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
                         title: 'Room Rent:',
                         content: 'Rs. ${hostel.roomRent}/month',
                       ),
@@ -103,6 +106,11 @@ class _HostelListPageState extends State<HostelListPage> {
                         title: 'Available Rooms:',
                         content:
                             '${hostel.availableRooms}/${hostel.totalRooms}',
+                      ),
+                      const SizedBox(height: 16),
+                      _buildDetailsSection(
+                        title: 'Wifi Available:',
+                        content: '${hostel.isWifiAvailable}',
                       ),
                       const SizedBox(height: 16),
                       _buildDetailsSection(
@@ -159,6 +167,7 @@ class _HostelListPageState extends State<HostelListPage> {
     // Initialize filter options
     _isAirConditionedFilterEnabled = false;
     _isFoodMessAvailableFilterEnabled = false;
+    _isWifiAvailableFilterEnabled = false;
     _roomRentFilter = 0;
     getUserData();
     // Fetch all hostels from database
@@ -179,11 +188,14 @@ class _HostelListPageState extends State<HostelListPage> {
           !_isAirConditionedFilterEnabled || hostel.isAirConditioned;
       bool isFoodMessAvailableFilterMatch =
           !_isFoodMessAvailableFilterEnabled || hostel.isFoodMessAvailable;
+      bool isWifiAvailableFilterMatch =
+          !_isWifiAvailableFilterEnabled || hostel.isWifiAvailable;
       bool roomRentFilterMatch =
           _roomRentFilter == 0 || hostel.roomRent <= _roomRentFilter;
       bool isSelectedCity = (_selectedCity == hostel.location);
       return isAirConditionedFilterMatch &&
               isFoodMessAvailableFilterMatch &&
+              isWifiAvailableFilterMatch &&
               roomRentFilterMatch &&
               isSelectedCity ||
           _showAllEnabled;
@@ -252,6 +264,17 @@ class _HostelListPageState extends State<HostelListPage> {
                                           child: Text(e),
                                         ))
                                     .toList(),
+                              ),
+                              CheckboxListTile(
+                                title: const Text('Wifi available'),
+                                value: _isWifiAvailableFilterEnabled ,
+                                onChanged: (value) {
+                                  setState(() {
+                                    setStateD(() {});
+                                    _isWifiAvailableFilterEnabled =
+                                        value ?? false;
+                                  });
+                                },
                               ),
                               CheckboxListTile(
                                 title: const Text('Air conditioned'),

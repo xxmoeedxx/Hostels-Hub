@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:db_project/pages/login.dart';
+import 'package:db_project/services/database_service.dart';
 import 'package:flutter/material.dart';
 import 'package:db_project/components/my_button.dart';
 import 'package:db_project/components/my_textfield.dart';
@@ -25,6 +26,8 @@ Future<void> signUpWithEmail(String email, String password) async {
     print(e.toString());
   }
 }
+
+final DatabaseService _db = DatabaseService();
 
 class Signup extends StatelessWidget {
   Signup({Key? key, required this.email}) : super(key: key);
@@ -148,14 +151,21 @@ class Signup extends StatelessWidget {
                                     MyButtonAgree(
                                       text: "Agree and Continue",
                                       onTap: () {
-                                        signUpWithEmail(usernameController.text,
-                                            passwordController.text);
+                                        signUpWithEmail(
+                                            email, passwordController.text);
+                                        final FirebaseAuth _auth =
+                                            FirebaseAuth.instance;
+                                        _db.createUser(
+                                            name: "--",
+                                            uid: _auth.currentUser!.uid,
+                                            contact: "--",
+                                            profilePicture:
+                                                'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png');
                                         Navigator.pushReplacement(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) => LoginPage(
-                                                      email: usernameController
-                                                          .text,
+                                                      email: email,
                                                     )));
                                       },
                                     ),

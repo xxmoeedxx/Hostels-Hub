@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:db_project/pages/hostel_list.dart';
 import 'package:db_project/pages/login.dart';
 import 'package:db_project/pages/map.dart';
+import 'package:db_project/services/database_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:db_project/components/my_button.dart';
@@ -21,9 +22,10 @@ Future<bool> checkIfEmailExists(String Email) async {
 }
 
 final GoogleSignIn _googleSignIn = GoogleSignIn();
-
+final DatabaseService _db = DatabaseService();
 Future<UserCredential> signInWithGoogle() async {
   // Attempt to sign in with Google account.
+  await _googleSignIn.signOut();
   final GoogleSignInAccount? googleSignInAccount = await _googleSignIn.signIn();
   final GoogleSignInAuthentication googleSignInAuthentication =
       await googleSignInAccount!.authentication;
@@ -201,8 +203,22 @@ class WelcomePage extends StatelessWidget {
                                         SquareTile(
                                           onTap: () async {
                                             try {
-                                              signInWithGoogle();
-                                              () => Navigator.pushReplacement(
+                                              await signInWithGoogle();
+                                              final userDoc = await _db.getUser(
+                                                  _auth.currentUser!.uid);
+                                              if (userDoc == null) {
+                                                _db.createUser(
+                                                    name: _auth.currentUser!
+                                                        .displayName!,
+                                                    uid: _auth.currentUser!.uid,
+                                                    contact: _auth.currentUser!
+                                                            .phoneNumber ??
+                                                        "--",
+                                                    profilePicture: _auth
+                                                        .currentUser!
+                                                        .photoURL!);
+                                              } else {}
+                                              Navigator.pushReplacement(
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>

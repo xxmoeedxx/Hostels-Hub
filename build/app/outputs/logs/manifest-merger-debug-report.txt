@@ -5,6 +5,8 @@ MERGED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/
 MERGED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:geolocator_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-17:19
@@ -19,12 +21,12 @@ MERGED from [:twitter_login] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/bu
 MERGED from [:twitter_login] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/twitter_login/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-17:19
 MERGED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-18:19
 MERGED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-18:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:7:5-15:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:10:5-18:19
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:28:5-73:19
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.android.recaptcha:recaptcha:18.0.1] /home/moeed/.gradle/caches/transforms-3/2c04072651461b5d6b73fba6442b7bd9/transformed/jetified-recaptcha-18.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.recaptcha:recaptcha:18.0.1] /home/moeed/.gradle/caches/transforms-3/2c04072651461b5d6b73fba6442b7bd9/transformed/jetified-recaptcha-18.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.facebook.android:facebook-login:15.0.2] /home/moeed/.gradle/caches/transforms-3/4a901ed6c1d14f6d03cd8304a6f0e2ce/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:28:5-29:19
@@ -37,8 +39,10 @@ MERGED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.grad
 MERGED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.gradle/caches/transforms-3/e43f2f28479db8944abf22a05fa6b176/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/moeed/.gradle/caches/transforms-3/e34d94c1abf56c04ca7143f3c4ce5c00/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/moeed/.gradle/caches/transforms-3/e34d94c1abf56c04ca7143f3c4ce5c00/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:15:5-23:19
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/moeed/.gradle/caches/transforms-3/83c05e96a5c044133c4480eb03d66a4d/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/moeed/.gradle/caches/transforms-3/83c05e96a5c044133c4480eb03d66a4d/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.1] /home/moeed/.gradle/caches/transforms-3/137c1fdf778a5e06eac153b5e0e6dce7/transformed/jetified-firebase-appcheck-interop-16.1.1/AndroidManifest.xml:23:5-20
@@ -49,10 +53,10 @@ MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.grad
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/moeed/.gradle/caches/transforms-3/cf13498ec070b2edf7374358793c282d/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/moeed/.gradle/caches/transforms-3/cf13498ec070b2edf7374358793c282d/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-analytics:21.2.1] /home/moeed/.gradle/caches/transforms-3/d886c1ff099b3a2a35de4227804561ec/transformed/jetified-firebase-analytics-21.2.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:21.2.1] /home/moeed/.gradle/caches/transforms-3/d886c1ff099b3a2a35de4227804561ec/transformed/jetified-firebase-analytics-21.2.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.firebase:firebase-analytics:21.2.2] /home/moeed/.gradle/caches/transforms-3/998b89071cecb05fc85819de062a6f79/transformed/jetified-firebase-analytics-21.2.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:21.2.2] /home/moeed/.gradle/caches/transforms-3/998b89071cecb05fc85819de062a6f79/transformed/jetified-firebase-analytics-21.2.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:27:5-35:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:13:5-21:19
 MERGED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
@@ -61,16 +65,16 @@ MERGED from [com.google.android.play:integrity:1.0.1] /home/moeed/.gradle/caches
 MERGED from [com.google.android.play:integrity:1.0.1] /home/moeed/.gradle/caches/transforms-3/647f9cd2e5ea05dfe5e74306cbfe83db/transformed/jetified-integrity-1.0.1/AndroidManifest.xml:5:5-6:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/moeed/.gradle/caches/transforms-3/9a06505b305d2a4e680592c869273083/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/moeed/.gradle/caches/transforms-3/9a06505b305d2a4e680592c869273083/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.1] /home/moeed/.gradle/caches/transforms-3/b08886e341f8aba51c035be4b53adbab/transformed/jetified-play-services-measurement-sdk-21.2.1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.1] /home/moeed/.gradle/caches/transforms-3/b08886e341f8aba51c035be4b53adbab/transformed/jetified-play-services-measurement-sdk-21.2.1/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:29:5-30:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:29:5-30:19
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.2] /home/moeed/.gradle/caches/transforms-3/51cc094b5b5776633a3b1a3a89a52404/transformed/jetified-play-services-measurement-sdk-21.2.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.2] /home/moeed/.gradle/caches/transforms-3/51cc094b5b5776633a3b1a3a89a52404/transformed/jetified-play-services-measurement-sdk-21.2.2/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:29:5-30:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:25:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.1] /home/moeed/.gradle/caches/transforms-3/3bc9fd29b0973291cf015a499cfae37f/transformed/jetified-play-services-measurement-base-21.2.1/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.1] /home/moeed/.gradle/caches/transforms-3/3bc9fd29b0973291cf015a499cfae37f/transformed/jetified-play-services-measurement-base-21.2.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.2] /home/moeed/.gradle/caches/transforms-3/810b870a2dcdd992560616295eaa3335/transformed/jetified-play-services-measurement-base-21.2.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.2] /home/moeed/.gradle/caches/transforms-3/810b870a2dcdd992560616295eaa3335/transformed/jetified-play-services-measurement-base-21.2.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/moeed/.gradle/caches/transforms-3/9531d1b0d9d0687eafec46baf192b0df/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/moeed/.gradle/caches/transforms-3/9531d1b0d9d0687eafec46baf192b0df/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/moeed/.gradle/caches/transforms-3/e047d5c1d8fbf8efffcbaeef12ddf781/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
@@ -109,12 +113,15 @@ INJECTED from /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/android/app/src/m
 MERGED from /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/android/app/src/main/AndroidManifest.xml:1:1-41:12
 MERGED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:geolocator_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:google_maps_flutter_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_maps_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:image_picker_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:url_launcher_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:google_sign_in_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:flutter_secure_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:flutter_facebook_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_facebook_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -125,9 +132,9 @@ MERGED from [:flutter_inappwebview] /media/moeed/66C870D9C870A8C7/Github/Hostels
 MERGED from [:twitter_login] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/twitter_login/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:geocoding_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/geocoding_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-20:12
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:2:1-20:12
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.android.recaptcha:recaptcha:18.0.1] /home/moeed/.gradle/caches/transforms-3/2c04072651461b5d6b73fba6442b7bd9/transformed/jetified-recaptcha-18.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.android:facebook-login:15.0.2] /home/moeed/.gradle/caches/transforms-3/4a901ed6c1d14f6d03cd8304a6f0e2ce/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-common:15.0.2] /home/moeed/.gradle/caches/transforms-3/08eb588507f69fd2d7c482a38e97ab54/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:21:1-56:12
@@ -136,7 +143,8 @@ MERGED from [androidx.appcompat:appcompat:1.5.1] /home/moeed/.gradle/caches/tran
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /home/moeed/.gradle/caches/transforms-3/b9ad3551ddceda30ddf97865c2cce86b/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:17:1-44:12
 MERGED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.gradle/caches/transforms-3/e43f2f28479db8944abf22a05fa6b176/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/moeed/.gradle/caches/transforms-3/e34d94c1abf56c04ca7143f3c4ce5c00/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:2:1-25:12
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:2:1-25:12
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/moeed/.gradle/caches/transforms-3/e3d9f9323d1570b362a8698b561dc8b6/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/moeed/.gradle/caches/transforms-3/fde401a8ca64d23459e5bb6beab56481/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] /home/moeed/.gradle/caches/transforms-3/83c05e96a5c044133c4480eb03d66a4d/transformed/jetified-play-services-fido-20.0.1/AndroidManifest.xml:2:1-10:12
@@ -145,19 +153,19 @@ MERGED from [com.google.firebase:firebase-appcheck-interop:16.1.1] /home/moeed/.
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] /home/moeed/.gradle/caches/transforms-3/48dc2b07ac6386cdb2b566b223c2d800/transformed/jetified-play-services-safetynet-17.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/moeed/.gradle/caches/transforms-3/cf13498ec070b2edf7374358793c282d/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-analytics:21.2.1] /home/moeed/.gradle/caches/transforms-3/d886c1ff099b3a2a35de4227804561ec/transformed/jetified-firebase-analytics-21.2.1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-analytics:21.2.2] /home/moeed/.gradle/caches/transforms-3/998b89071cecb05fc85819de062a6f79/transformed/jetified-firebase-analytics-21.2.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:17:1-37:12
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:2:1-23:12
 MERGED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.play:integrity:1.0.1] /home/moeed/.gradle/caches/transforms-3/647f9cd2e5ea05dfe5e74306cbfe83db/transformed/jetified-integrity-1.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /home/moeed/.gradle/caches/transforms-3/757034362df8baff0bd76d5c6c911ba6/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/moeed/.gradle/caches/transforms-3/9a06505b305d2a4e680592c869273083/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.1] /home/moeed/.gradle/caches/transforms-3/b08886e341f8aba51c035be4b53adbab/transformed/jetified-play-services-measurement-sdk-21.2.1/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:17:1-32:12
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.2] /home/moeed/.gradle/caches/transforms-3/51cc094b5b5776633a3b1a3a89a52404/transformed/jetified-play-services-measurement-sdk-21.2.2/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:17:1-28:12
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.1] /home/moeed/.gradle/caches/transforms-3/3bc9fd29b0973291cf015a499cfae37f/transformed/jetified-play-services-measurement-base-21.2.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.2] /home/moeed/.gradle/caches/transforms-3/810b870a2dcdd992560616295eaa3335/transformed/jetified-play-services-measurement-base-21.2.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/moeed/.gradle/caches/transforms-3/9531d1b0d9d0687eafec46baf192b0df/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/moeed/.gradle/caches/transforms-3/e047d5c1d8fbf8efffcbaeef12ddf781/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] /home/moeed/.gradle/caches/transforms-3/9559e2be5d01873f346ee09b9414a6b1/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:16:1-26:12
@@ -234,22 +242,24 @@ MERGED from /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/android/app/src/mai
 MERGED from /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/android/app/src/main/AndroidManifest.xml:4:5-66
 MERGED from [:google_sign_in_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:google_sign_in_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /home/moeed/.gradle/caches/transforms-3/b9ad3551ddceda30ddf97865c2cce86b/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /home/moeed/.gradle/caches/transforms-3/b9ad3551ddceda30ddf97865c2cce86b/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:13:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:13:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:10:5-67
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:10:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -272,6 +282,8 @@ MERGED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/
 MERGED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:geolocator_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -282,8 +294,12 @@ MERGED from [:image_picker_android] /media/moeed/66C870D9C870A8C7/Github/Hostels
 MERGED from [:image_picker_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:url_launcher_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:url_launcher_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:google_sign_in_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/google_sign_in_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_secure_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/flutter_secure_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:53
@@ -304,12 +320,12 @@ MERGED from [:geocoding_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hu
 MERGED from [:geocoding_android] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/geocoding_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.android.recaptcha:recaptcha:18.0.1] /home/moeed/.gradle/caches/transforms-3/2c04072651461b5d6b73fba6442b7bd9/transformed/jetified-recaptcha-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.recaptcha:recaptcha:18.0.1] /home/moeed/.gradle/caches/transforms-3/2c04072651461b5d6b73fba6442b7bd9/transformed/jetified-recaptcha-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.android:facebook-login:15.0.2] /home/moeed/.gradle/caches/transforms-3/4a901ed6c1d14f6d03cd8304a6f0e2ce/transformed/jetified-facebook-login-15.0.2/AndroidManifest.xml:24:5-26:41
@@ -326,8 +342,10 @@ MERGED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.grad
 MERGED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.gradle/caches/transforms-3/e43f2f28479db8944abf22a05fa6b176/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/moeed/.gradle/caches/transforms-3/e34d94c1abf56c04ca7143f3c4ce5c00/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /home/moeed/.gradle/caches/transforms-3/e34d94c1abf56c04ca7143f3c4ce5c00/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/moeed/.gradle/caches/transforms-3/e3d9f9323d1570b362a8698b561dc8b6/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /home/moeed/.gradle/caches/transforms-3/e3d9f9323d1570b362a8698b561dc8b6/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /home/moeed/.gradle/caches/transforms-3/fde401a8ca64d23459e5bb6beab56481/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
@@ -344,10 +362,10 @@ MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.grad
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/moeed/.gradle/caches/transforms-3/cf13498ec070b2edf7374358793c282d/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /home/moeed/.gradle/caches/transforms-3/cf13498ec070b2edf7374358793c282d/transformed/jetified-firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:21.2.1] /home/moeed/.gradle/caches/transforms-3/d886c1ff099b3a2a35de4227804561ec/transformed/jetified-firebase-analytics-21.2.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:21.2.1] /home/moeed/.gradle/caches/transforms-3/d886c1ff099b3a2a35de4227804561ec/transformed/jetified-firebase-analytics-21.2.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-analytics:21.2.2] /home/moeed/.gradle/caches/transforms-3/998b89071cecb05fc85819de062a6f79/transformed/jetified-firebase-analytics-21.2.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:21.2.2] /home/moeed/.gradle/caches/transforms-3/998b89071cecb05fc85819de062a6f79/transformed/jetified-firebase-analytics-21.2.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
@@ -358,18 +376,18 @@ MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /home/mo
 MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /home/moeed/.gradle/caches/transforms-3/757034362df8baff0bd76d5c6c911ba6/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/moeed/.gradle/caches/transforms-3/9a06505b305d2a4e680592c869273083/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /home/moeed/.gradle/caches/transforms-3/9a06505b305d2a4e680592c869273083/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.1] /home/moeed/.gradle/caches/transforms-3/b08886e341f8aba51c035be4b53adbab/transformed/jetified-play-services-measurement-sdk-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.1] /home/moeed/.gradle/caches/transforms-3/b08886e341f8aba51c035be4b53adbab/transformed/jetified-play-services-measurement-sdk-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.2] /home/moeed/.gradle/caches/transforms-3/51cc094b5b5776633a3b1a3a89a52404/transformed/jetified-play-services-measurement-sdk-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.2.2] /home/moeed/.gradle/caches/transforms-3/51cc094b5b5776633a3b1a3a89a52404/transformed/jetified-play-services-measurement-sdk-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.1] /home/moeed/.gradle/caches/transforms-3/3bc9fd29b0973291cf015a499cfae37f/transformed/jetified-play-services-measurement-base-21.2.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:21.2.1] /home/moeed/.gradle/caches/transforms-3/3bc9fd29b0973291cf015a499cfae37f/transformed/jetified-play-services-measurement-base-21.2.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.2] /home/moeed/.gradle/caches/transforms-3/810b870a2dcdd992560616295eaa3335/transformed/jetified-play-services-measurement-base-21.2.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:21.2.2] /home/moeed/.gradle/caches/transforms-3/810b870a2dcdd992560616295eaa3335/transformed/jetified-play-services-measurement-base-21.2.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/moeed/.gradle/caches/transforms-3/9531d1b0d9d0687eafec46baf192b0df/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] /home/moeed/.gradle/caches/transforms-3/9531d1b0d9d0687eafec46baf192b0df/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/moeed/.gradle/caches/transforms-3/e047d5c1d8fbf8efffcbaeef12ddf781/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
@@ -490,24 +508,28 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:cloud_firestore] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:8:9-14:19
-MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:11:9-17:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:11:9-17:19
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:16:9-22:19
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:16:9-22:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:28:9-34:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:14:9-20:19
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:14:9-20:19
 MERGED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
 MERGED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
 	android:exported
-		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:10:13-37
+		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:10:13-37
 	tools:targetApi
 		ADDED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:36:13-32
 	android:directBootAware
@@ -526,6 +548,12 @@ ADDED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/bui
 		ADDED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_auth] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_storage] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
 ADDED from [:firebase_core] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
 	android:value
@@ -659,11 +687,11 @@ ADDED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/lo
 	android:name
 		ADDED from [:location] /media/moeed/66C870D9C870A8C7/Github/Hostels-Hub/build/location/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-71
 meta-data#com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar
-ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:11:13-13:85
+ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:11:13-13:85
 	android:value
-		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:13:17-82
+		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:13:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.1] /home/moeed/.gradle/caches/transforms-3/214655b707018fe3539983df0aacd1d4/transformed/jetified-firebase-analytics-ktx-21.2.1/AndroidManifest.xml:12:17-126
+		ADDED from [com.google.firebase:firebase-analytics-ktx:21.2.2] /home/moeed/.gradle/caches/transforms-3/421891c0ac2f4db05018a13c3f41defa/transformed/jetified-firebase-analytics-ktx-21.2.2/AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
 ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:14:13-16:85
 	android:value
@@ -671,79 +699,81 @@ ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/
 	android:name
 		ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /home/moeed/.gradle/caches/transforms-3/756dd9f05e42a6c0af02e643ac398b53/transformed/jetified-firebase-common-ktx-20.3.2/AndroidManifest.xml:15:17-113
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:26:5-79
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /home/moeed/.gradle/caches/transforms-3/b9ad3551ddceda30ddf97865c2cce86b/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-maps:18.1.0] /home/moeed/.gradle/caches/transforms-3/b9ad3551ddceda30ddf97865c2cce86b/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:12:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:12:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:9:5-79
 MERGED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:9:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:24:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] /home/moeed/.gradle/caches/transforms-3/5106fdc5516e43f43da77cc0cd72c398/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.52.1] /home/moeed/.gradle/caches/transforms-3/5106fdc5516e43f43da77cc0cd72c398/transformed/jetified-grpc-android-1.52.1/AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:26:22-76
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:22-76
 activity#com.google.firebase.auth.internal.GenericIdpActivity
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:29:9-46:20
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:31:13-46
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:31:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:33:13-44
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:33:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:32:13-36
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:32:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:34:13-72
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:34:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:30:13-80
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:35:13-45:29
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:35:13-45:29
 action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:17-69
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:36:25-66
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:17-76
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:38:27-73
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:17-78
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:39:27-75
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
 data
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:41:17-44:51
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
 	android:path
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:43:21-37
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
 	android:host
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:42:21-49
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
 	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:44:21-48
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:47:9-64:20
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:49:13-46
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:49:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:51:13-44
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:51:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:50:13-36
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:52:13-72
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:52:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:48:13-79
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:48:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:53:13-63:29
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:53:13-63:29
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:69:13-71:85
+ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:69:13-71:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:71:17-82
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:71:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:21.2.0] /home/moeed/.gradle/caches/transforms-3/f2a478f2fdbefffa80333ff218d53e23/transformed/jetified-firebase-auth-21.2.0/AndroidManifest.xml:70:17-109
+		ADDED from [com.google.firebase:firebase-auth:21.3.0] /home/moeed/.gradle/caches/transforms-3/325cf1865e7f91cce81eb77740e50f4f/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:70:17-109
 package#com.facebook.katana
 ADDED from [com.facebook.android:facebook-common:15.0.2] /home/moeed/.gradle/caches/transforms-3/08eb588507f69fd2d7c482a38e97ab54/transformed/jetified-facebook-common-15.0.2/AndroidManifest.xml:30:9-55
 	android:name
@@ -809,11 +839,17 @@ ADDED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.gradl
 	android:name
 		ADDED from [com.google.android.gms:play-services-auth:20.5.0] /home/moeed/.gradle/caches/transforms-3/e43f2f28479db8944abf22a05fa6b176/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:34:13-89
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:19:13-21:85
+ADDED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:19:13-21:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:21:17-82
+		ADDED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:21:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:24.4.5] /home/moeed/.gradle/caches/transforms-3/8ba14816235c376346956ce511e34521/transformed/jetified-firebase-firestore-24.4.5/AndroidManifest.xml:20:17-111
+		ADDED from [com.google.firebase:firebase-firestore:24.5.0] /home/moeed/.gradle/caches/transforms-3/03edad5abe6f82aa58da225a865fa1b6/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:20:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.1.0] /home/moeed/.gradle/caches/transforms-3/946d6583388fc67f5631e3a1ca87a4c5/transformed/jetified-firebase-storage-20.1.0/AndroidManifest.xml:33:17-107
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
 	android:exported
@@ -823,33 +859,33 @@ ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradl
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:18.1.0] /home/moeed/.gradle/caches/transforms-3/4b1ba05c4187f8ba42de7d14188c127e/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:25:5-68
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:25:5-68
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:24:22-65
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:24:22-65
 uses-permission#com.google.android.gms.permission.AD_ID
-ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:27:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:27:5-79
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:27:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:27:5-79
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-ads-identifier:18.0.0] /home/moeed/.gradle/caches/transforms-3/a84f14f65b499d1d63d334096ced1f18/transformed/jetified-play-services-ads-identifier-18.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/36f76760f0ddb808a187f2dab31d7dbd/transformed/jetified-play-services-measurement-sdk-api-21.2.1/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/cfe935127c04dd403a461c49292b6918/transformed/jetified-play-services-measurement-sdk-api-21.2.2/AndroidManifest.xml:26:5-79
 MERGED from [com.facebook.android:facebook-core:15.0.2] /home/moeed/.gradle/caches/transforms-3/63d260894c90e4772dfe7f9bce85882a/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:28:5-79
 MERGED from [com.facebook.android:facebook-core:15.0.2] /home/moeed/.gradle/caches/transforms-3/63d260894c90e4772dfe7f9bce85882a/transformed/jetified-facebook-core-15.0.2/AndroidManifest.xml:28:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:25:22-76
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:25:22-76
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:31:13-33:85
+ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:31:13-33:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:33:17-82
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:33:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.1] /home/moeed/.gradle/caches/transforms-3/a2028e487cf1cca6d401e2b6367c19df/transformed/jetified-play-services-measurement-api-21.2.1/AndroidManifest.xml:32:17-139
+		ADDED from [com.google.android.gms:play-services-measurement-api:21.2.2] /home/moeed/.gradle/caches/transforms-3/94dedec7e3a9891236e7e672ebb01db0/transformed/jetified-play-services-measurement-api-21.2.2/AndroidManifest.xml:32:17-139
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
 ADDED from [com.google.firebase:firebase-installations:17.1.3] /home/moeed/.gradle/caches/transforms-3/3141666e60334aef33852ac82fc624de/transformed/jetified-firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
 	android:value
@@ -869,39 +905,39 @@ ADDED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/cach
 	android:name
 		ADDED from [com.google.firebase:firebase-common:20.3.2] /home/moeed/.gradle/caches/transforms-3/7c697278e7c3dabc35aaf1eb1c5e7b67/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.1] /home/moeed/.gradle/caches/transforms-3/d1b84d109d97386eb3d6aa0b8c814967/transformed/jetified-play-services-measurement-impl-21.2.1/AndroidManifest.xml:26:5-110
+ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:21.2.2] /home/moeed/.gradle/caches/transforms-3/c1881a988ff6369bb771f9e569edd911/transformed/jetified-play-services-measurement-impl-21.2.2/AndroidManifest.xml:26:5-110
 MERGED from [com.android.installreferrer:installreferrer:1.0] /home/moeed/.gradle/caches/transforms-3/42757a92714e2c9beee058d386506f39/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
 MERGED from [com.android.installreferrer:installreferrer:1.0] /home/moeed/.gradle/caches/transforms-3/42757a92714e2c9beee058d386506f39/transformed/jetified-installreferrer-1.0/AndroidManifest.xml:9:5-110
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:26:22-107
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:31:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:32:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:30:13-85
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:30:13-85
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:35:9-38:40
+ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:35:9-38:40
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:37:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:38:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:36:13-84
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:36:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:39:9-43:72
+ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:39:9-43:72
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:41:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:41:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:42:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:42:13-37
 	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:43:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:43:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:21.2.1] /home/moeed/.gradle/caches/transforms-3/2ec40c54ba3dca0e8f5397fd82895d26/transformed/jetified-play-services-measurement-21.2.1/AndroidManifest.xml:40:13-87
+		ADDED from [com.google.android.gms:play-services-measurement:21.2.2] /home/moeed/.gradle/caches/transforms-3/1ff29f54a6b4f247a6107530296c7bec/transformed/jetified-play-services-measurement-21.2.2/AndroidManifest.xml:40:13-87
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:18.2.0] /home/moeed/.gradle/caches/transforms-3/9559e2be5d01873f346ee09b9414a6b1/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
 	android:value

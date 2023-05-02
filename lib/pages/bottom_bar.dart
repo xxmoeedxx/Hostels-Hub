@@ -1,5 +1,6 @@
 import 'package:db_project/pages/hostel_list.dart';
 import 'package:db_project/pages/map.dart';
+import 'package:db_project/pages/myHostels.dart';
 import 'package:db_project/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,15 +14,15 @@ class AnimatedBottomBar extends StatefulWidget {
 class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
   static int _currentIndex = 0;
   final List<IconData> _icons = [
-    Icons.home,
+    Icons.location_city,
     Icons.map,
-    Icons.notifications,
+    Icons.edit_attributes,
     Icons.person,
   ];
   final List<String> _labels = [
     'Hostel List',
     'Map',
-    'Notifications',
+    'Manage',
     'Profile',
   ];
 
@@ -46,6 +47,9 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar> {
               } else if (index == 1) {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const MapPage()));
+              } else if (index == 2) {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => MyHostelsPage()));
               } else if (index == 3) {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => ProfilePage()));
