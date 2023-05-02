@@ -141,6 +141,24 @@ class DatabaseService {
     }
   }
 
+  Future<Booking?> getBookingInfo(String userId, String hostelId) async {
+    try {
+      final QuerySnapshot querySnapshot = await FirebaseFirestore.instance
+          .collection('bookings')
+          .where('userId', isEqualTo: userId)
+          .where('hostelId', isEqualTo: hostelId)
+          .get();
+      if (querySnapshot.docs.isNotEmpty) {
+        return Booking.fromFirestore(querySnapshot.docs.first);
+      } else {
+        return null;
+      }
+    } catch (e) {
+      print('Error getting booking info: $e');
+      return null;
+    }
+  }
+
   // Create a new review document in the database
   Future<void> createReview({
     required String hostelId,
@@ -161,6 +179,16 @@ class DatabaseService {
     return _db.collection('reviews').snapshots().map((snapshot) {
       return snapshot.docs.map((doc) => Review.fromFirestore(doc)).toList();
     });
+  }
+
+  Future<void> createBooking({
+    required String hostelId,
+    required String userId,
+    required Timestamp timestamp,
+  }) async {
+    await _db
+        .collection('Booking')
+        .add({'hostelId': hostelId, 'userId': userId, 'timestamp': timestamp});
   }
 }
 
@@ -268,6 +296,25 @@ class Hostel {
       images: List<String>.from(data['images'] ?? []),
       ownerEmail: data['ownerEmail'] ?? '',
       hostelId: doc.id,
+    );
+  }
+}
+
+class Booking {
+  final String userId;
+  final String hostelId;
+  final Timestamp timestamp;
+  Booking({
+    required this.userId,
+    required this.hostelId,
+    required this.timestamp,
+  });
+  factory Booking.fromFirestore(DocumentSnapshot doc) {
+    Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+    return Booking(
+      hostelId: data['hostelId'] ?? '',
+      userId: data['userId'] ?? '',
+      timestamp: data['timestamp'] ?? Timestamp.now(),
     );
   }
 }

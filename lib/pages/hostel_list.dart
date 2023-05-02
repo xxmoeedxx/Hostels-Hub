@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:db_project/pages/Questions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,7 @@ import 'package:db_project/services/database_service.dart';
 import 'package:db_project/pages/bottom_bar.dart';
 import 'package:provider/provider.dart';
 import '../components/ImageCarousels.dart';
+import '../components/bookNowButton.dart';
 import '../services/user_provider.dart';
 //import 'package:hostel_app/hostel.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -121,6 +123,12 @@ class _HostelListPageState extends State<HostelListPage> {
                       _buildDetailsSection(
                         title: 'Food Mess Available:',
                         content: '${hostel.isFoodMessAvailable}',
+                      ),
+                      const SizedBox(height: 16),
+                      BookingButton(
+                        hostelId: hostel.hostelId,
+                        userId: _auth.currentUser!.uid,
+                        timestamp: Timestamp.now(),
                       ),
                       const SizedBox(height: 16),
                     ],
@@ -267,7 +275,7 @@ class _HostelListPageState extends State<HostelListPage> {
                               ),
                               CheckboxListTile(
                                 title: const Text('Wifi available'),
-                                value: _isWifiAvailableFilterEnabled ,
+                                value: _isWifiAvailableFilterEnabled,
                                 onChanged: (value) {
                                   setState(() {
                                     setStateD(() {});

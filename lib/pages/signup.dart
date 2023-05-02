@@ -115,7 +115,6 @@ class Signup extends StatelessWidget {
                                 MyPasswordTextField(
                                   controller: passwordController,
                                   hintText: 'Password',
-                                  obscureText: true,
                                 ),
                                 const SizedBox(height: 15),
 

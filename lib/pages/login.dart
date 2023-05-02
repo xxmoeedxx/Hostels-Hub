@@ -109,10 +109,9 @@ class LoginPage extends StatelessWidget {
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
                                         0.03),
-                                MyTextField(
+                                MyPasswordTextField(
                                   controller: passwordController,
                                   hintText: 'Password',
-                                  obscureText: true,
                                 ),
                                 SizedBox(
                                     height: MediaQuery.of(context).size.height *
