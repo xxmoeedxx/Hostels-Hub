@@ -35,9 +35,11 @@ class Signup extends StatelessWidget {
   // text editing controllers
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final nameController = TextEditingController();
+  final contactController = TextEditingController();
   final String email;
-  final double _sigmaX = 5; // from 0-10
-  final double _sigmaY = 5; // from 0-10
+  final double _sigmaX = 7; // from 0-10
+  final double _sigmaY = 7; // from 0-10
   final double _opacity = 0.2;
   final _formKey = GlobalKey<FormState>();
 
@@ -68,7 +70,7 @@ class Signup extends StatelessWidget {
                       Navigator.pop(context);
                     },
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.12),
                   const Text("Sign Up",
                       style: TextStyle(
                           color: Colors.white,
@@ -87,7 +89,7 @@ class Signup extends StatelessWidget {
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(30))),
                         width: MediaQuery.of(context).size.width * 0.95,
-                        height: MediaQuery.of(context).size.height * 0.50,
+                        height: MediaQuery.of(context).size.height * 0.60,
                         child: Form(
                           key: _formKey,
                           child: Center(
@@ -110,6 +112,18 @@ class Signup extends StatelessWidget {
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold),
                                   textAlign: TextAlign.start,
+                                ),
+                                const SizedBox(height: 15),
+                                MyTextField(
+                                  controller: nameController,
+                                  hintText: 'Name',
+                                  obscureText: false,
+                                ),
+                                const SizedBox(height: 15),
+                                MyTextField(
+                                  controller: contactController,
+                                  hintText: 'Contact',
+                                  obscureText: false,
                                 ),
                                 const SizedBox(height: 15),
                                 MyPasswordTextField(
@@ -155,9 +169,9 @@ class Signup extends StatelessWidget {
                                         final FirebaseAuth _auth =
                                             FirebaseAuth.instance;
                                         _db.createUser(
-                                            name: "--",
+                                            name: nameController.text,
                                             uid: _auth.currentUser!.uid,
-                                            contact: "--",
+                                            contact: contactController.text,
                                             profilePicture:
                                                 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png');
                                         Navigator.pushReplacement(

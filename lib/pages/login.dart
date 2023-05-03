@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:db_project/services/user_provider.dart';
 
 import '../services/database_service.dart';
+import 'forgotPassword.dart';
 
 // ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
@@ -137,11 +138,13 @@ class LoginPage extends StatelessWidget {
                                         Users? user = await userFuture;
                                         userProvider.setCurrentUser(user!);
 
-                                        Navigator.pushReplacement(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    HostelListPage()));
+                                        Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HostelListPage()),
+                                          (route) => false,
+                                        );
                                       } on FirebaseAuthException catch (e) {
                                         if (e.code == 'wrong-password') {
                                           showDialog(
@@ -179,14 +182,31 @@ class LoginPage extends StatelessWidget {
                                                 ));
                                       }
                                     }),
-                                const SizedBox(height: 30),
-                                const Text('Forgot Password?',
+                                const SizedBox(height: 20),
+                                // const Text('Forgot Password?',
+                                //     style: TextStyle(
+                                //         color:
+                                //             Color.fromARGB(255, 71, 233, 133),
+                                //         fontWeight: FontWeight.bold,
+                                //         fontSize: 20),
+                                //     textAlign: TextAlign.start),
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                ForgetPasswordPage()));
+                                  },
+                                  child: Text(
+                                    'Forget Password',
+                                    textAlign: TextAlign.left,
                                     style: TextStyle(
-                                        color:
-                                            Color.fromARGB(255, 71, 233, 133),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                    textAlign: TextAlign.start),
+                                        decoration: TextDecoration.underline,
+                                        color: Color(0xFF00E676),
+                                        fontSize: 22),
+                                  ),
+                                  style: ButtonStyle(),
+                                ),
                               ],
                             ),
                           ),

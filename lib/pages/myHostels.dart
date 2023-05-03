@@ -1,3 +1,4 @@
+import 'package:db_project/components/my_button.dart';
 import 'package:db_project/pages/Questions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,8 @@ import '../components/ImageCarousels.dart';
 import '../services/user_provider.dart';
 //import 'package:hostel_app/hostel.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
+import 'hostellites.dart';
 
 class MyHostelsPage extends StatefulWidget {
   @override
@@ -32,6 +35,7 @@ class _MyHostelsPageState extends State<MyHostelsPage> {
   late int _roomRentFilter;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final DatabaseService _db = DatabaseService();
+  late Function()? onTap;
   Future<void> getUserData() async {
     User? user = _auth.currentUser;
     UserProvider userProvider =
@@ -51,6 +55,16 @@ class _MyHostelsPageState extends State<MyHostelsPage> {
   Future<void> _showHostelDetails(Hostel hostel) async {
     setState(() {
       _selectedHostel = hostel;
+      onTap = () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HostelBookingListPage(
+              hostelId: hostel.hostelId,
+            ),
+          ),
+        );
+      };
     });
 
     showModalBottomSheet(
@@ -129,6 +143,38 @@ class _MyHostelsPageState extends State<MyHostelsPage> {
                         content: '${hostel.isFoodMessAvailable}',
                       ),
                       const SizedBox(height: 16),
+                      GestureDetector(
+                        onTap: onTap,
+                        child: AnimatedContainer(
+                          duration: const Duration(seconds: 1),
+                          child: Container(
+                            padding: const EdgeInsets.all(20),
+                            decoration: BoxDecoration(
+                              color: const Color.fromARGB(255, 7, 6, 68),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                "View Bookings",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20),
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                      // MyButton(onTap: () {
+                      //   Navigator.pushReplacement(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => HostelBookingListPage(
+                      //         hostelId: hostel.hostelId,
+                      //       ),
+                      //     ),
+                      //   );
+                      // }),
                     ],
                   ),
                 ),
@@ -314,6 +360,7 @@ class _MyHostelsPageState extends State<MyHostelsPage> {
                           },
                         ),
                       ),
+
                       // Filter options
                       const Padding(
                         padding: EdgeInsets.all(16.0),

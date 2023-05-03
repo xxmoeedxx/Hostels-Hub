@@ -255,47 +255,6 @@ class WelcomePage extends StatelessWidget {
                                   //const SizedBox(height: 10),
 
                                   // not a member? register now
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.stretch,
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
-                                          // ignore: prefer_const_literals_to_create_immutables
-                                          children: [
-                                            Text(
-                                              'Don\'t have an account?',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 18),
-                                              textAlign: TextAlign.center,
-                                            ),
-                                            const SizedBox(width: 4),
-                                            const Text(
-                                              'Sign Up',
-                                              style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 71, 233, 133),
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 18),
-                                              textAlign: TextAlign.end,
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height *
-                                                0.01),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),

@@ -3,6 +3,7 @@ import 'package:db_project/services/database_service.dart';
 import 'package:flutter/material.dart';
 
 final DatabaseService _db = DatabaseService();
+Booking? bk;
 
 class BookingButton extends StatefulWidget {
   @override
@@ -25,13 +26,21 @@ class _BookingButtonState extends State<BookingButton>
   late Animation<double> _opacityAnimation;
   late Animation<double> _rotationAnimation;
 
+  Future<void> initB() async {
+    bk = await _db.getBookingInfo(widget.userId, widget.hostelId);
+    setState(() {
+      if (bk != null) {
+        _isButtonDisabled = true;
+      }
+    });
+  }
+
   bool _isButtonDisabled = false;
   bool _isButtonTapped = false;
-
   @override
   void initState() {
+    initB();
     super.initState();
-
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1500),
@@ -78,10 +87,12 @@ class _BookingButtonState extends State<BookingButton>
 
     setState(() {
       _isButtonTapped = true;
-      _db.createBooking(
-          hostelId: widget.hostelId,
-          userId: widget.userId,
-          timestamp: widget.timestamp);
+      if (bk == null) {
+        _db.createBooking(
+            hostelId: widget.hostelId,
+            userId: widget.userId,
+            timestamp: widget.timestamp);
+      }
     });
 
     _controller.forward().then((_) {
@@ -133,8 +144,8 @@ class _BookingButtonState extends State<BookingButton>
                   ),
                 ],
               )
-            : const Text(
-                'Book Now',
+            : Text(
+                (bk == null) ? 'Book Now' : 'Booked',
                 style: TextStyle(fontSize: 20.0),
               ),
       ),

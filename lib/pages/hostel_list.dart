@@ -335,7 +335,7 @@ class _HostelListPageState extends State<HostelListPage> {
                                 child: Slider(
                                   value: _roomRentFilter.toDouble(),
                                   min: 0,
-                                  max: 25,
+                                  max: 30000,
                                   divisions: 100,
                                   label: 'Max room rent: $_roomRentFilter',
                                   onChanged: (value) {

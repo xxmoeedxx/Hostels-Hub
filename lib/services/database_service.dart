@@ -143,13 +143,18 @@ class DatabaseService {
 
   Future<Booking?> getBookingInfo(String userId, String hostelId) async {
     try {
-      final QuerySnapshot querySnapshot = await FirebaseFirestore.instance
-          .collection('bookings')
+      final QuerySnapshot querySnapshot = await _db
+          .collection('Booking')
           .where('userId', isEqualTo: userId)
           .where('hostelId', isEqualTo: hostelId)
           .get();
       if (querySnapshot.docs.isNotEmpty) {
-        return Booking.fromFirestore(querySnapshot.docs.first);
+        try {
+          return Booking.fromFirestore(querySnapshot.docs.first);
+        } catch (e) {
+          print('Error creating Booking object: $e');
+          return null;
+        }
       } else {
         return null;
       }
